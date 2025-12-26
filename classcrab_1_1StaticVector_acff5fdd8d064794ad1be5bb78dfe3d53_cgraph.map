@@ -1,0 +1,7 @@
+<map id="crab::StaticVector::try_reserve" name="crab::StaticVector::try_reserve">
+<area shape="rect" id="Node000001" title="Reserve capacity (no&#45;op for StaticVector)." alt="" coords="5,23,130,64"/>
+<area shape="rect" id="Node000002" href="$namespacecrab.html#a3745fae96ffff64db507a12f27498a39" title="Factory function to create an Err result." alt="" coords="178,5,246,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,30,162,24,163,29,130,35"/>
+<area shape="rect" id="Node000003" href="$namespacecrab.html#a9085393618393c23f64c2525f2c1961f" title="Factory function for Ok with void/Unit result." alt="" coords="178,55,247,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,51,163,57,162,62,130,56"/>
+</map>

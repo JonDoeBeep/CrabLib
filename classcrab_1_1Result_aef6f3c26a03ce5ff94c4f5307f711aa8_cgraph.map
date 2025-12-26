@@ -1,0 +1,7 @@
+<map id="crab::Result::map_err" name="crab::Result::map_err">
+<area shape="rect" id="Node000001" title="Transform the Err value." alt="" coords="5,31,148,56"/>
+<area shape="rect" id="Node000002" href="$namespacecrab.html#a3745fae96ffff64db507a12f27498a39" title="Factory function to create an Err result." alt="" coords="196,5,264,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,29,180,24,181,29,149,34"/>
+<area shape="rect" id="Node000003" href="$namespacecrab.html#a9085393618393c23f64c2525f2c1961f" title="Factory function for Ok with void/Unit result." alt="" coords="196,55,265,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,52,181,57,180,62,148,57"/>
+</map>

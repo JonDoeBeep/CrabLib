@@ -1,0 +1,7 @@
+<map id="crab::Slice::get" name="crab::Slice::get">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,111,56"/>
+<area shape="rect" id="Node000002" href="$namespacecrab.html#a3745fae96ffff64db507a12f27498a39" title="Factory function to create an Err result." alt="" coords="159,5,228,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,31,143,25,144,30,112,36"/>
+<area shape="rect" id="Node000003" href="$namespacecrab.html#a9085393618393c23f64c2525f2c1961f" title="Factory function for Ok with void/Unit result." alt="" coords="159,55,228,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,50,144,56,143,61,111,55"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="crab::Option::unwrap_or" name="crab::Option::unwrap_or">
+<area shape="rect" id="Node000001" title="Get value or return default." alt="" coords="5,5,162,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#ad0294686ce4ee356c447fa75174444b6" title="Check if Option contains a value." alt="" coords="210,5,355,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,16,194,16,194,21,162,21"/>
+</map>

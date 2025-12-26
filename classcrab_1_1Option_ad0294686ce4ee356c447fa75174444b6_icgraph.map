@@ -1,0 +1,31 @@
+<map id="crab::Option::is_some" name="crab::Option::is_some">
+<area shape="rect" id="Node000001" title="Check if Option contains a value." alt="" coords="224,327,369,352"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#ad81b79a803f53e136d83a665380d7bac" title="Chain operations that return Option." alt="" coords="16,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,312,279,256,259,183,244,145,225,108,202,74,174,44,158,34,161,29,177,40,206,71,229,106,249,143,264,182,284,254,295,311"/>
+<area shape="rect" id="Node000003" href="$classcrab_1_1Option.html#a08db4db309bb9b21423705fcf14a6b66" title=" " alt="" coords="24,55,157,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="287,312,274,265,252,206,219,145,198,118,174,94,156,82,158,78,177,89,202,114,224,142,257,203,279,263,292,311"/>
+<area shape="rect" id="Node000004" href="$classcrab_1_1Option.html#a95773e612dc5ca347b6ebaa01c667377" title="Get pointer to value, or nullptr if None." alt="" coords="24,104,157,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="283,313,268,274,245,228,213,182,174,143,156,132,158,128,177,139,217,179,249,226,273,272,288,311"/>
+<area shape="rect" id="Node000005" href="$classcrab_1_1Option.html#abadf270577e555834fb1ae3993adedd8" title="Filter the Option based on predicate." alt="" coords="30,153,151,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="278,314,237,252,208,220,174,192,150,181,152,176,177,188,211,216,241,249,283,311"/>
+<area shape="rect" id="Node000006" href="$classcrab_1_1Option.html#ab68ee2531b0173b349f2b2aebca63aaf" title="Transform the contained value." alt="" coords="30,203,151,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="271,317,228,279,174,242,150,231,152,227,177,237,231,274,274,313"/>
+<area shape="rect" id="Node000007" href="$classcrab_1_1Option.html#a496e8bb8dedb161f685cdc6277d167a1" title="Pattern match on the Option." alt="" coords="24,252,157,278"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="252,322,175,291,142,281,143,276,177,286,254,318"/>
+<area shape="rect" id="Node000008" href="$classcrab_1_1Option.html#a565e83cc20ada533d847f634a2306641" title=" " alt="" coords="24,301,157,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="208,331,157,325,157,320,209,326"/>
+<area shape="rect" id="Node000009" href="$classcrab_1_1Option.html#a8ce135367df8d18704730ae4dd4981fd" title="Boolean conversion: true if Some." alt="" coords="5,351,176,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="209,352,176,356,176,351,208,347"/>
+<area shape="rect" id="Node000010" href="$classcrab_1_1Option.html#a5c6a5a97a47de9f92c48d19693946c5d" title=" " alt="" coords="13,400,168,426"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="253,361,177,391,143,402,141,397,175,386,251,356"/>
+<area shape="rect" id="Node000011" href="$classcrab_1_1Option.html#abceab404f68c6d5a8101ae6a498f4067" title="Extract the value, panicking if None." alt="" coords="21,449,160,475"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="274,365,231,404,177,441,151,451,149,446,174,436,228,400,270,361"/>
+<area shape="rect" id="Node000012" href="$classcrab_1_1Option.html#ae2cab3ea5ae7575142ae0bbfd0fb7362" title=" " alt="" coords="21,499,160,524"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="283,367,241,429,211,462,177,490,156,500,154,496,174,485,208,458,237,426,278,364"/>
+<area shape="rect" id="Node000013" href="$classcrab_1_1Option.html#ad71ca449d1570ea1e6e31dda79615d80" title=" " alt="" coords="21,548,160,574"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="288,368,273,407,249,453,217,499,177,539,159,550,156,545,174,535,213,496,244,450,268,404,283,366"/>
+<area shape="rect" id="Node000014" href="$classcrab_1_1Option.html#a94e74cc9e08524d979e691d138949013" title="Get value or return default." alt="" coords="12,597,169,623"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="292,368,279,415,257,475,224,536,202,564,177,588,160,599,158,594,174,584,198,560,219,533,252,472,274,414,287,366"/>
+<area shape="rect" id="Node000015" href="$classcrab_1_1Option.html#a177567a7f5d02b77899423d411954512" title="Get value or compute default from function." alt="" coords="21,647,160,688"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="294,368,283,424,262,496,227,571,205,606,177,637,162,649,159,645,174,634,200,603,223,568,257,494,278,423,289,367"/>
+</map>

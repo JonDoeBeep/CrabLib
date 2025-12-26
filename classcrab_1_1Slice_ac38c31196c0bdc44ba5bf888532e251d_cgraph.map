@@ -1,0 +1,5 @@
+<map id="crab::Slice::front" name="crab::Slice::front">
+<area shape="rect" id="Node000001" title="Get first element (panics if empty in debug)." alt="" coords="5,5,119,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Slice.html#aa2dc031afe125d1af6dd034f50687144" title=" " alt="" coords="167,5,306,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
+</map>

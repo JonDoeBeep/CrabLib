@@ -1,0 +1,5 @@
+<map id="crab/static_vector.h" name="crab/static_vector.h">
+<area shape="rect" id="Node000001" title="Fixed&#45;capacity vector with stack allocation (no heap)." alt="" coords="5,5,141,31"/>
+<area shape="rect" id="Node000002" href="$prelude_8h.html" title="Single&#45;include header for all CrabLib types." alt="" coords="22,79,124,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,46,76,79,70,79,70,46"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="crab::Slice::back" name="crab::Slice::back">
+<area shape="rect" id="Node000001" title="Get last element (panics if empty in debug)." alt="" coords="5,5,121,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Slice.html#aa2dc031afe125d1af6dd034f50687144" title=" " alt="" coords="169,5,308,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,16,153,16,153,21,121,21"/>
+</map>

@@ -1,0 +1,37 @@
+<map id="crab::Ok" name="crab::Ok">
+<area shape="rect" id="Node000001" title="Factory function for Ok with void/Unit result." alt="" coords="213,400,282,426"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Slice.html#ad3f4a3d68c44d5a3bc865f4e4c087882" title="Copy from another slice into this one." alt="" coords="11,5,159,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,385,232,305,216,203,193,107,179,69,163,44,150,34,153,30,167,40,183,67,198,105,221,202,237,305,246,384"/>
+<area shape="rect" id="Node000003" href="$classcrab_1_1Slice.html#a9a92f0ef4f8d96bc31f0b73ffd110c5e" title="Copy contents to another slice." alt="" coords="19,55,151,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,385,229,315,213,228,190,146,177,115,163,93,149,83,152,79,167,90,182,112,195,144,218,227,235,314,245,384"/>
+<area shape="rect" id="Node000004" href="$classcrab_1_1Slice.html#aa7d93746087031a239ad7498e3fc40ae" title=" " alt="" coords="32,104,138,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,385,239,333,227,268,203,201,185,170,163,143,137,127,139,123,166,139,190,167,208,199,232,267,245,333,249,384"/>
+<area shape="rect" id="Node000005" href="$classcrab_1_1Slice.html#af2c91da11311a6356400f592dddc047e" title="Get element with bounds checking, returning Result." alt="" coords="32,153,138,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="241,385,234,342,221,290,197,238,182,213,163,192,137,177,139,172,166,188,186,210,202,235,226,289,239,341,246,384"/>
+<area shape="rect" id="Node000006" href="$classcrab_1_1StaticVector.html#a0bcb3167ad24abc5702bb4c62c4d5312" title=" " alt="" coords="11,203,159,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="238,386,228,352,213,314,192,275,163,242,147,231,150,227,166,237,196,272,218,311,233,351,243,384"/>
+<area shape="rect" id="Node000007" href="$classcrab_1_1StaticVector.html#afe957ae73c8c56d29d881483d9fd17a8" title="Access element with bounds checking, returning Result." alt="" coords="11,252,159,278"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="233,387,205,338,186,312,163,291,145,281,148,276,166,287,190,309,210,335,237,384"/>
+<area shape="rect" id="Node000008" href="$classcrab_1_1Result.html#aa08cb687a10dd2001de662e4aa790075" title="Transform the Ok value." alt="" coords="25,301,145,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="223,390,196,364,163,340,140,330,142,325,166,336,199,360,227,387"/>
+<area shape="rect" id="Node000009" href="$classcrab_1_1Result.html#aef6f3c26a03ce5ff94c4f5307f711aa8" title="Transform the Err value." alt="" coords="14,351,156,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="197,400,164,390,129,379,131,374,165,385,199,395"/>
+<area shape="rect" id="Node000010" href="$classcrab_1_1Option.html#aebd6edb5be68600c06359059d5d56c20" title="Convert to Result, using provided error if None." alt="" coords="21,400,149,426"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="197,416,150,416,150,410,197,410"/>
+<area shape="rect" id="Node000011" href="$classcrab_1_1Option.html#aba045676dc5b8119e3fdf28e25acc42d" title="Convert to Result, computing error from function if None." alt="" coords="5,449,165,475"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="199,430,165,441,131,451,129,446,164,436,197,425"/>
+<area shape="rect" id="Node000012" href="$classcrab_1_1Result.html#a43b6bd6e1e2c676285eadfd00637a841" title="Provide alternative on Err." alt="" coords="16,499,154,524"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="227,439,199,466,166,490,142,501,140,496,163,485,196,461,223,435"/>
+<area shape="rect" id="Node000013" href="$classcrab_1_1Slice.html#a2b8adbd65659ca1af0e77ba2f9a1ef8a" title="Extract a subslice with bounds checking." alt="" coords="17,548,153,574"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="237,441,210,491,190,517,166,539,148,550,145,545,163,535,186,513,205,488,233,439"/>
+<area shape="rect" id="Node000014" href="$classcrab_1_1StaticVector.html#a12b6faeca0b0a235efcdf9b574c5258e" title="Construct element in&#45;place (checked)." alt="" coords="19,598,151,638"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="242,441,232,475,217,514,195,553,167,588,151,600,148,595,163,584,191,550,212,511,227,473,237,440"/>
+<area shape="rect" id="Node000015" href="$classcrab_1_1StaticVector.html#ad0cb121c197c9382a2de9017a7f58c7f" title="Add element by copy (checked)." alt="" coords="23,663,147,704"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="246,441,240,486,226,542,202,600,186,627,167,652,149,666,146,662,163,648,182,624,197,598,221,540,234,485,241,441"/>
+<area shape="rect" id="Node000016" href="$classcrab_1_1StaticVector.html#a9e05dd30d9cdd69b69c09f68c1609583" title="Add element by move (checked)." alt="" coords="23,728,147,769"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="249,442,246,498,234,571,224,610,209,648,191,684,167,717,149,732,146,728,163,714,186,682,204,646,218,608,229,570,240,497,244,441"/>
+<area shape="rect" id="Node000017" href="$classcrab_1_1StaticVector.html#acff5fdd8d064794ad1be5bb78dfe3d53" title="Reserve capacity (no&#45;op for StaticVector)." alt="" coords="23,794,147,834"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="246,441,236,519,220,621,197,717,183,755,167,783,149,797,146,793,163,779,178,753,192,716,214,620,231,519,240,441"/>
+<area shape="rect" id="Node000018" href="$classcrab_1_1StaticVector.html#af97f85cef5d59566c87d78ed2a3eee96" title="Resize the vector." alt="" coords="23,859,147,900"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="247,442,239,532,224,653,200,769,185,815,167,848,149,863,146,859,163,844,180,813,195,768,218,652,234,532,241,441"/>
+</map>

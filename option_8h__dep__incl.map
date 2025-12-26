@@ -1,0 +1,14 @@
+<map id="crab/option.h" name="crab/option.h">
+<area shape="rect" id="Node000001" title="Ergonomic Option&lt;T&gt; type with Rust&#45;inspired monadic interface." alt="" coords="139,5,234,31"/>
+<area shape="rect" id="Node000002" href="$mutex_8h.html" title="Rust&#45;style data&#45;owning Mutex&lt;T&gt;." alt="" coords="5,79,101,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,41,77,81,74,76,149,36"/>
+<area shape="rect" id="Node000003" href="$prelude_8h.html" title="Single&#45;include header for all CrabLib types." alt="" coords="135,153,238,178"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="177,46,166,79,166,99,169,119,182,151,177,153,164,120,160,100,161,79,172,44"/>
+<area shape="rect" id="Node000004" href="$ring__buffer_8h.html" title="Lock&#45;free SPSC (Single Producer Single Consumer) ring buffer." alt="" coords="176,79,296,105"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="205,42,230,77,225,80,201,45"/>
+<area shape="rect" id="Node000005" href="$static__vector_8h.html" title="Fixed&#45;capacity vector with stack allocation (no heap)." alt="" coords="320,79,455,105"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="236,34,354,76,352,81,234,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,110,165,150,162,154,88,115"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="221,119,197,154,192,151,217,116"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="340,113,222,155,220,150,338,108"/>
+</map>

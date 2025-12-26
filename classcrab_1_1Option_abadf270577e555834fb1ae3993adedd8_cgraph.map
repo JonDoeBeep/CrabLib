@@ -1,0 +1,5 @@
+<map id="crab::Option::filter" name="crab::Option::filter">
+<area shape="rect" id="Node000001" title="Filter the Option based on predicate." alt="" coords="5,5,126,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#ad0294686ce4ee356c447fa75174444b6" title="Check if Option contains a value." alt="" coords="174,5,319,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,16,158,16,158,21,126,21"/>
+</map>

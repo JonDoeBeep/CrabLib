@@ -1,0 +1,7 @@
+<map id="crab::Option::ok_or" name="crab::Option::ok_or">
+<area shape="rect" id="Node000001" title="Convert to Result, using provided error if None." alt="" coords="5,31,134,56"/>
+<area shape="rect" id="Node000002" href="$namespacecrab.html#a3745fae96ffff64db507a12f27498a39" title="Factory function to create an Err result." alt="" coords="182,5,250,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,30,166,24,167,29,135,35"/>
+<area shape="rect" id="Node000003" href="$namespacecrab.html#a9085393618393c23f64c2525f2c1961f" title="Factory function for Ok with void/Unit result." alt="" coords="182,55,251,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,51,167,57,166,62,134,57"/>
+</map>

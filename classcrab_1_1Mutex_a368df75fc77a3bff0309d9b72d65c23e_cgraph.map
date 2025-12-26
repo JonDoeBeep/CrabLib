@@ -1,0 +1,7 @@
+<map id="crab::Mutex::try_lock" name="crab::Mutex::try_lock">
+<area shape="rect" id="Node000001" title="Try to acquire lock without blocking." alt="" coords="5,31,144,56"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Mutex.html#a6c22e94e6ff9f68874d39fc41b2c6bbc" title="Acquire exclusive lock, blocking until available." alt="" coords="192,5,309,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,31,176,26,176,31,145,36"/>
+<area shape="rect" id="Node000003" href="$namespacecrab.html#ab1da763ed0c6f937fecc16e891b2015a" title="Create an Option containing a value." alt="" coords="207,55,294,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,50,193,57,192,62,144,56"/>
+</map>

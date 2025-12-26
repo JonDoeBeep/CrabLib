@@ -1,0 +1,5 @@
+<map id="crab/mutex.h" name="crab/mutex.h">
+<area shape="rect" id="Node000001" title="Rust&#45;style data&#45;owning Mutex&lt;T&gt;." alt="" coords="9,5,104,31"/>
+<area shape="rect" id="Node000002" href="$prelude_8h.html" title="Single&#45;include header for all CrabLib types." alt="" coords="5,79,108,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,46,59,79,54,79,54,46"/>
+</map>

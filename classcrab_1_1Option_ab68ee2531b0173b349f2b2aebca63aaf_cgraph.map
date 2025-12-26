@@ -1,0 +1,7 @@
+<map id="crab::Option::map" name="crab::Option::map">
+<area shape="rect" id="Node000001" title="Transform the contained value." alt="" coords="5,31,127,56"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#ad0294686ce4ee356c447fa75174444b6" title="Check if Option contains a value." alt="" coords="175,5,320,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,32,159,28,159,33,128,38"/>
+<area shape="rect" id="Node000003" href="$namespacecrab.html#ab1da763ed0c6f937fecc16e891b2015a" title="Create an Option containing a value." alt="" coords="204,55,290,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,49,189,57,188,62,127,54"/>
+</map>

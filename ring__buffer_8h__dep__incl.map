@@ -1,0 +1,5 @@
+<map id="crab/ring_buffer.h" name="crab/ring_buffer.h">
+<area shape="rect" id="Node000001" title="Lock&#45;free SPSC (Single Producer Single Consumer) ring buffer." alt="" coords="5,5,126,31"/>
+<area shape="rect" id="Node000002" href="$prelude_8h.html" title="Single&#45;include header for all CrabLib types." alt="" coords="14,79,117,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,46,68,79,63,79,63,46"/>
+</map>

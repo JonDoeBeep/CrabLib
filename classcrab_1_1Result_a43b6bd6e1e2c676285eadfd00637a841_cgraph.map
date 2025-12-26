@@ -1,0 +1,5 @@
+<map id="crab::Result::or_else" name="crab::Result::or_else">
+<area shape="rect" id="Node000001" title="Provide alternative on Err." alt="" coords="5,5,143,31"/>
+<area shape="rect" id="Node000002" href="$namespacecrab.html#a9085393618393c23f64c2525f2c1961f" title="Factory function for Ok with void/Unit result." alt="" coords="191,5,260,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
+</map>

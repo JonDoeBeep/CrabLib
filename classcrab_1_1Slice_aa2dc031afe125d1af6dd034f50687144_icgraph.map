@@ -1,0 +1,11 @@
+<map id="crab::Slice::is_empty" name="crab::Slice::is_empty">
+<area shape="rect" id="Node000001" title=" " alt="" coords="169,80,308,106"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Slice.html#a65da2b99b33fac36c61ffdc1a9974121" title=" " alt="" coords="5,5,121,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,76,120,45,95,34,97,29,122,40,194,71"/>
+<area shape="rect" id="Node000003" href="$classcrab_1_1Slice.html#ae399a0b9ed05c16e734bfbae0a66660c" title="Get last element (panics if empty in debug)." alt="" coords="5,55,121,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,83,121,78,122,73,153,78"/>
+<area shape="rect" id="Node000004" href="$classcrab_1_1Slice.html#aab020cc70b1118206a6bbb4d8273f28c" title=" " alt="" coords="6,104,120,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,107,120,112,120,106,153,102"/>
+<area shape="rect" id="Node000005" href="$classcrab_1_1Slice.html#ac38c31196c0bdc44ba5bf888532e251d" title="Get first element (panics if empty in debug)." alt="" coords="6,153,120,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="192,115,97,155,95,150,190,110"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="crab/result.h" name="crab/result.h">
+<area shape="rect" id="Node000001" title="Rust&#45;inspired Result&lt;T, E&gt; type for error handling without exceptions." alt="" coords="420,5,512,31"/>
+<area shape="rect" id="Node000002" href="$option_8h.html" title="Ergonomic Option&lt;T&gt; type with Rust&#45;inspired monadic interface." alt="" coords="188,79,283,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="414,38,276,81,274,76,412,33"/>
+<area shape="rect" id="Node000004" href="$prelude_8h.html" title="Single&#45;include header for all CrabLib types." alt="" coords="260,226,363,252"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="478,45,484,75,488,110,484,146,470,180,448,202,421,218,392,229,364,236,363,230,391,224,419,214,445,198,465,177,479,145,482,110,479,76,472,47"/>
+<area shape="rect" id="Node000006" href="$static__vector_8h.html" title="Fixed&#45;capacity vector with stack allocation (no heap)." alt="" coords="320,153,455,178"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="455,46,397,153,392,151,450,43"/>
+<area shape="rect" id="Node000007" href="$slice_8h.html" title="Bounds&#45;checked non&#45;owning view for contiguous memory." alt="" coords="531,79,618,105"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="499,38,557,76,554,81,496,42"/>
+<area shape="rect" id="Node000003" href="$mutex_8h.html" title="Rust&#45;style data&#45;owning Mutex&lt;T&gt;." alt="" coords="5,153,101,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,113,85,155,83,150,190,108"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="201,115,183,129,168,144,162,161,166,177,185,197,208,212,235,222,261,229,259,234,233,227,206,217,181,201,161,180,156,160,164,142,179,125,198,111"/>
+<area shape="rect" id="Node000005" href="$ring__buffer_8h.html" title="Lock&#45;free SPSC (Single Producer Single Consumer) ring buffer." alt="" coords="176,153,296,178"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="238,120,238,152,233,152,233,120"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="276,109,363,150,361,154,274,114"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,180,268,223,267,228,111,185"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="261,187,301,224,297,228,258,191"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="366,191,326,228,323,224,362,187"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="564,120,543,151,513,180,477,201,438,217,364,234,363,229,436,212,475,196,510,176,539,148,560,117"/>
+</map>

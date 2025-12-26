@@ -1,0 +1,5 @@
+<map id="crab::Slice::skip" name="crab::Slice::skip">
+<area shape="rect" id="Node000001" title="Skip first n elements (clamped to size)." alt="" coords="5,5,117,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Slice.html#a104ac005b0ae8237f1566742a9c3dc33" title="Default constructor: empty slice." alt="" coords="165,5,281,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,16,149,16,149,21,117,21"/>
+</map>

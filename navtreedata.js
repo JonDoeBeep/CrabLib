@@ -24,12 +24,48 @@
 */
 var NAVTREE =
 [
-  [ "CrabLib", "index.html", ]
+  [ "CrabLib", "index.html", [
+    [ "Types", "index.html#autotoc_md3", null ],
+    [ "Usage", "index.html#autotoc_md4", null ],
+    [ "Installation", "index.html#autotoc_md5", null ],
+    [ "Requirements", "index.html#autotoc_md6", null ],
+    [ "Build Modes", "index.html#autotoc_md7", null ],
+    [ "License", "index.html#autotoc_md8", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ]
+      ] ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Related Symbols", "functions_rela.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html",
+"classcrab_1_1Slice.html#abcd92ee44066c8a4ffb9bf339d04ee9e",
+"structcrab_1_1CapacityExceeded.html#a36454004aa173712f4b3f177601e8ae5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

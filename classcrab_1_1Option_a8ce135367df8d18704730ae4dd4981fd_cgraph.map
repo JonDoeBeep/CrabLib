@@ -1,0 +1,5 @@
+<map id="crab::Option::operator bool" name="crab::Option::operator bool">
+<area shape="rect" id="Node000001" title="Boolean conversion: true if Some." alt="" coords="5,5,176,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#ad0294686ce4ee356c447fa75174444b6" title="Check if Option contains a value." alt="" coords="224,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,16,208,16,208,21,176,21"/>
+</map>

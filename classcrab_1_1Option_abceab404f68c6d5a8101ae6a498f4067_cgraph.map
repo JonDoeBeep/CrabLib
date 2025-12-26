@@ -1,0 +1,5 @@
+<map id="crab::Option::unwrap" name="crab::Option::unwrap">
+<area shape="rect" id="Node000001" title="Extract the value, panicking if None." alt="" coords="5,5,144,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#ad0294686ce4ee356c447fa75174444b6" title="Check if Option contains a value." alt="" coords="192,5,337,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,16,176,16,176,21,144,21"/>
+</map>

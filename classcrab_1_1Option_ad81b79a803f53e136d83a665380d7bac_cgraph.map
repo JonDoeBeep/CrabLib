@@ -1,0 +1,5 @@
+<map id="crab::Option::and_then" name="crab::Option::and_then">
+<area shape="rect" id="Node000001" title="Chain operations that return Option." alt="" coords="5,5,155,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#ad0294686ce4ee356c447fa75174444b6" title="Check if Option contains a value." alt="" coords="203,5,348,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,16,187,16,187,21,155,21"/>
+</map>

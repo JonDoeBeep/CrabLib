@@ -1,0 +1,28 @@
+<map id="crab/macros.h" name="crab/macros.h">
+<area shape="rect" id="Node000001" title="CrabLib assertion and utility macros." alt="" coords="308,5,411,31"/>
+<area shape="rect" id="Node000002" href="$option_8h.html" title="Ergonomic Option&lt;T&gt; type with Rust&#45;inspired monadic interface." alt="" coords="252,153,347,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="351,46,307,153,302,151,346,44"/>
+<area shape="rect" id="Node000004" href="$prelude_8h.html" title="Single&#45;include header for all CrabLib types." alt="" coords="248,300,351,326"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="297,38,226,63,146,102,107,127,71,156,39,190,13,228,8,240,12,250,27,262,50,273,113,289,184,300,248,306,248,311,183,305,111,294,48,278,25,267,8,254,3,240,8,225,35,186,67,152,104,123,144,98,224,58,295,33"/>
+<area shape="rect" id="Node000005" href="$ring__buffer_8h.html" title="Lock&#45;free SPSC (Single Producer Single Consumer) ring buffer." alt="" coords="22,226,142,252"/>
+<area shape="poly" id="edge16_Node000001_Node000005" title=" " alt="" coords="334,43,99,228,96,224,331,39"/>
+<area shape="rect" id="Node000006" href="$static__vector_8h.html" title="Fixed&#45;capacity vector with stack allocation (no heap)." alt="" coords="337,226,473,252"/>
+<area shape="poly" id="edge18_Node000001_Node000006" title=" " alt="" coords="368,45,405,225,400,227,363,46"/>
+<area shape="rect" id="Node000007" href="$result_8h.html" title="Rust&#45;inspired Result&lt;T, E&gt; type for error handling without exceptions." alt="" coords="423,79,515,105"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="392,37,452,76,449,81,389,42"/>
+<area shape="rect" id="Node000008" href="$slice_8h.html" title="Bounds&#45;checked non&#45;owning view for contiguous memory." alt="" coords="539,153,626,178"/>
+<area shape="poly" id="edge17_Node000001_Node000008" title=" " alt="" coords="427,30,480,48,529,77,547,95,562,115,580,151,575,154,557,118,543,98,526,81,477,53,426,35"/>
+<area shape="rect" id="Node000003" href="$mutex_8h.html" title="Rust&#45;style data&#45;owning Mutex&lt;T&gt;." alt="" coords="167,226,262,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="275,190,230,228,227,224,272,186"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="302,194,302,299,297,299,297,194"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="249,186,120,228,119,223,248,181"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="332,185,389,224,386,228,329,190"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="242,260,287,298,284,302,239,264"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="134,255,263,297,262,302,133,260"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="376,263,319,302,316,297,373,259"/>
+<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="427,114,330,155,327,150,425,109"/>
+<area shape="poly" id="edge12_Node000007_Node000004" title=" " alt="" coords="484,118,494,148,502,183,501,220,496,237,487,254,459,280,424,298,387,308,352,313,351,308,386,303,422,293,456,276,483,250,491,235,496,219,497,184,489,149,479,120"/>
+<area shape="poly" id="edge15_Node000007_Node000006" title=" " alt="" coords="460,120,413,227,408,225,455,118"/>
+<area shape="poly" id="edge13_Node000007_Node000008" title=" " alt="" coords="502,111,564,150,562,154,500,116"/>
+<area shape="poly" id="edge14_Node000008_Node000004" title=" " alt="" coords="575,194,557,225,531,254,487,279,440,296,393,306,352,312,351,306,392,301,438,291,485,274,527,250,553,222,570,191"/>
+</map>

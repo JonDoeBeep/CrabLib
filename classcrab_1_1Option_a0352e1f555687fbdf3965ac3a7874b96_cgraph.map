@@ -1,0 +1,5 @@
+<map id="crab::Option::or_else" name="crab::Option::or_else">
+<area shape="rect" id="Node000001" title="Provide alternative on None." alt="" coords="5,5,144,31"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Option.html#a9cff736dbd79f14300d90f354bb5e7ef" title="Check if Option is empty." alt="" coords="192,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,16,176,16,176,21,144,21"/>
+</map>

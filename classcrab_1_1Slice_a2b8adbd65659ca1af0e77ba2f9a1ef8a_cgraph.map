@@ -1,0 +1,11 @@
+<map id="crab::Slice::subslice" name="crab::Slice::subslice">
+<area shape="rect" id="Node000001" title="Extract a subslice with bounds checking." alt="" coords="5,80,141,106"/>
+<area shape="rect" id="Node000002" href="$classcrab_1_1Slice.html#a04667a9810c77e49f8dbf0f3a3822613" title=" " alt="" coords="193,5,301,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,77,188,40,198,35,201,40,190,45,105,82"/>
+<area shape="rect" id="Node000003" href="$namespacecrab.html#a3745fae96ffff64db507a12f27498a39" title="Factory function to create an Err result." alt="" coords="213,55,281,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,80,197,72,197,77,141,86"/>
+<area shape="rect" id="Node000004" href="$namespacecrab.html#a9085393618393c23f64c2525f2c1961f" title="Factory function for Ok with void/Unit result." alt="" coords="212,104,282,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,100,197,107,196,113,141,105"/>
+<area shape="rect" id="Node000005" href="$classcrab_1_1Slice.html#a104ac005b0ae8237f1566742a9c3dc33" title="Default constructor: empty slice." alt="" coords="189,153,305,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="106,104,190,140,201,144,198,149,188,145,104,109"/>
+</map>
