@@ -4,17 +4,6 @@ Memory safety primitives for C++17 embedded systems.
 
 CrabLib provides runtime safety guarantees for codebases where exceptions are disabled (`-fno-exceptions`) and real-time performance is required. Header-only.
 
-## Types
-
-| Type | Description |
-|------|-------------|
-| `Result<T, E>` | Error handling without exceptions |
-| `Option<T>` | Nullable values with monadic interface |
-| `Slice<T>` | Bounds-checked non-owning view |
-| `StaticVector<T, N>` | Fixed-capacity vector, no heap |
-| `Mutex<T>` | Data-owning mutex |
-| `StaticRingBuffer<T, N>` | Lock-free SPSC buffer |
-
 ## Usage
 
 ```cpp
