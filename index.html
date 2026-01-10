@@ -107,24 +107,6 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <p>Memory safety primitives for C++17 embedded systems.</p>
 <p>CrabLib provides runtime safety guarantees for codebases where exceptions are disabled (<code>-fno-exceptions</code>) and real-time performance is required. Header-only.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
-Types</h1>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Type   </th><th class="markdownTableHeadNone">Description    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>Result&lt;T, E&gt;</code>   </td><td class="markdownTableBodyNone">Error handling without exceptions    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>Option&lt;T&gt;</code>   </td><td class="markdownTableBodyNone">Nullable values with monadic interface    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>Slice&lt;T&gt;</code>   </td><td class="markdownTableBodyNone">Bounds-checked non-owning view    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>StaticVector&lt;T, N&gt;</code>   </td><td class="markdownTableBodyNone">Fixed-capacity vector, no heap    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>Mutex&lt;T&gt;</code>   </td><td class="markdownTableBodyNone">Data-owning mutex    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>StaticRingBuffer&lt;T, N&gt;</code>   </td><td class="markdownTableBodyNone">Lock-free SPSC buffer   </td></tr>
-</table>
-<h1><a class="anchor" id="autotoc_md4"></a>
 Usage</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="prelude_8h.html">crab/prelude.h</a>&gt;</span></div>
 <div class="line"> </div>
@@ -138,19 +120,19 @@ Usage</h1>
 <div class="ttc" id="amacros_8h_html_a7202e1031079fc51f9b8fcca401189b4"><div class="ttname"><a href="macros_8h.html#a7202e1031079fc51f9b8fcca401189b4">CRAB_TRY</a></div><div class="ttdeci">#define CRAB_TRY(expr)</div><div class="ttdoc">Early return if Result is Err.</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00065">macros.h:65</a></div></div>
 <div class="ttc" id="anamespacecrab_html_a9085393618393c23f64c2525f2c1961f"><div class="ttname"><a href="namespacecrab.html#a9085393618393c23f64c2525f2c1961f">crab::Ok</a></div><div class="ttdeci">detail::OkTag&lt; Unit &gt; Ok()</div><div class="ttdoc">Factory function for Ok with void/Unit result.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00065">result.h:65</a></div></div>
 <div class="ttc" id="aprelude_8h_html"><div class="ttname"><a href="prelude_8h.html">prelude.h</a></div><div class="ttdoc">Single-include header for all CrabLib types.</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
 Installation</h1>
 <p>Add as CMake subdirectory:</p>
 <div class="fragment"><div class="line">add_subdirectory(CrabLib)</div>
 <div class="line">target_link_libraries(your_target PRIVATE crab::crab)</div>
 </div><!-- fragment --><p>Or copy <code>src/crab/</code> to your include path.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Requirements</h1>
 <ul>
 <li>C++17</li>
 <li>Tested with GCC 13.3, Clang, MSVC</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Build Modes</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -162,7 +144,7 @@ Build Modes</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Release + <code>CRAB_UNSAFE_FAST</code>   </td><td class="markdownTableBodyNone">None   </td><td class="markdownTableBodyNone">Maximum   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 License</h1>
 <p>MIT </p>
 </div></div><!-- PageDoc -->

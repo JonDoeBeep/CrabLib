@@ -5,5 +5,5 @@ var searchData=
   ['unwrap_5ferr_2',['unwrap_err',['../classcrab_1_1Result.html#aac086089363cb54da5c6ee8ed5db2712',1,'crab::Result::unwrap_err() &amp;'],['../classcrab_1_1Result.html#a227b8b955815c6344a9e0a2375e4c72f',1,'crab::Result::unwrap_err() const &amp;'],['../classcrab_1_1Result.html#a9368d791cc1978f6d374187c80ba4b07',1,'crab::Result::unwrap_err() &amp;&amp;']]],
   ['unwrap_5for_3',['unwrap_or',['../classcrab_1_1Option.html#a94e74cc9e08524d979e691d138949013',1,'crab::Option::unwrap_or()'],['../classcrab_1_1Result.html#ac7c3bdb7b1b4ca889273868b2d473a77',1,'crab::Result::unwrap_or()']]],
   ['unwrap_5for_5felse_4',['unwrap_or_else',['../classcrab_1_1Option.html#a177567a7f5d02b77899423d411954512',1,'crab::Option::unwrap_or_else()'],['../classcrab_1_1Result.html#a6e19b58578e9cab10db30a9a7e404f77',1,'crab::Result::unwrap_or_else()']]],
-  ['usage_5',['Usage',['../index.html#autotoc_md4',1,'']]]
+  ['usage_5',['Usage',['../index.html#autotoc_md3',1,'']]]
 ];

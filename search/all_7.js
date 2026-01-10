@@ -1,7 +1,7 @@
 var searchData=
 [
   ['index_0',['index',['../structcrab_1_1OutOfBounds.html#a0231ee4601060f006d78bebb07bbfe2e',1,'crab::OutOfBounds']]],
-  ['installation_1',['Installation',['../index.html#autotoc_md5',1,'']]],
+  ['installation_1',['Installation',['../index.html#autotoc_md4',1,'']]],
   ['is_5fempty_2',['is_empty',['../classcrab_1_1StaticRingBuffer.html#a02dcb4be550a2e20197a4b7d794a86c7',1,'crab::StaticRingBuffer::is_empty()'],['../classcrab_1_1Slice.html#aa2dc031afe125d1af6dd034f50687144',1,'crab::Slice::is_empty()']]],
   ['is_5ferr_3',['is_err',['../classcrab_1_1Result.html#a67b56161a911a68dae5acaedc0e3f3e2',1,'crab::Result']]],
   ['is_5ffull_4',['is_full',['../classcrab_1_1StaticRingBuffer.html#a2b1c1a31356417dfdc99eaa1484df250',1,'crab::StaticRingBuffer::is_full()'],['../classcrab_1_1StaticVector.html#a5376b73b1aa409884bf8d80c219aec0c',1,'crab::StaticVector::is_full()']]],

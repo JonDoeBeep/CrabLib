@@ -9,5 +9,5 @@ var searchData=
   ['try_5fpush_5fback_6',['try_push_back',['../classcrab_1_1StaticVector.html#ad0cb121c197c9382a2de9017a7f58c7f',1,'crab::StaticVector::try_push_back(const T &amp;value)'],['../classcrab_1_1StaticVector.html#a9e05dd30d9cdd69b69c09f68c1609583',1,'crab::StaticVector::try_push_back(T &amp;&amp;value)']]],
   ['try_5freserve_7',['try_reserve',['../classcrab_1_1StaticVector.html#acff5fdd8d064794ad1be5bb78dfe3d53',1,'crab::StaticVector']]],
   ['try_5fresize_8',['try_resize',['../classcrab_1_1StaticVector.html#af97f85cef5d59566c87d78ed2a3eee96',1,'crab::StaticVector']]],
-  ['types_9',['Types',['../namespacecrab.html#autotoc_md0',1,'Core Types'],['../index.html#autotoc_md3',1,'Types']]]
+  ['types_9',['Core Types',['../namespacecrab.html#autotoc_md0',1,'']]]
 ];
