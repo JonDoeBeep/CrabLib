@@ -125,9 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acfa9d2a8a44d8ef505467c20edbd6ae9" id="r_acfa9d2a8a44d8ef505467c20edbd6ae9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfa9d2a8a44d8ef505467c20edbd6ae9">StaticRingBuffer</a> () noexcept</td></tr>
 <tr class="memdesc:acfa9d2a8a44d8ef505467c20edbd6ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor, creates empty buffer.  <br /></td></tr>
 <tr class="separator:acfa9d2a8a44d8ef505467c20edbd6ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae31d4085662ca223a26699ac346a52f7" id="r_ae31d4085662ca223a26699ac346a52f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae31d4085662ca223a26699ac346a52f7">~StaticRingBuffer</a> ()</td></tr>
-<tr class="memdesc:ae31d4085662ca223a26699ac346a52f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor, properly destructs any remaining elements.  <br /></td></tr>
-<tr class="separator:ae31d4085662ca223a26699ac346a52f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8808daeb6d9f0b6236ad0796676feb" id="r_a1f8808daeb6d9f0b6236ad0796676feb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f8808daeb6d9f0b6236ad0796676feb">~StaticRingBuffer</a> () noexcept(std::is_nothrow_destructible_v&lt; T &gt;)</td></tr>
+<tr class="memdesc:a1f8808daeb6d9f0b6236ad0796676feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor, properly destructs any remaining elements.  <br /></td></tr>
+<tr class="separator:a1f8808daeb6d9f0b6236ad0796676feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3e4bded1ce81b34c70fa466f17a9bff" id="r_aa3e4bded1ce81b34c70fa466f17a9bff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3e4bded1ce81b34c70fa466f17a9bff">StaticRingBuffer</a> (const <a class="el" href="classcrab_1_1StaticRingBuffer.html">StaticRingBuffer</a> &amp;)=delete</td></tr>
 <tr class="separator:aa3e4bded1ce81b34c70fa466f17a9bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1539f202c437554987d4c4319f8c29c4" id="r_a1539f202c437554987d4c4319f8c29c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1StaticRingBuffer.html">StaticRingBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1539f202c437554987d4c4319f8c29c4">operator=</a> (const <a class="el" href="classcrab_1_1StaticRingBuffer.html">StaticRingBuffer</a> &amp;)=delete</td></tr>
@@ -251,8 +251,8 @@ template&lt;typename T , std::size_t Capacity&gt; </div>
 
 </div>
 </div>
-<a id="ae31d4085662ca223a26699ac346a52f7" name="ae31d4085662ca223a26699ac346a52f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae31d4085662ca223a26699ac346a52f7">&#9670;&#160;</a></span>~StaticRingBuffer()</h2>
+<a id="a1f8808daeb6d9f0b6236ad0796676feb" name="a1f8808daeb6d9f0b6236ad0796676feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f8808daeb6d9f0b6236ad0796676feb">&#9670;&#160;</a></span>~StaticRingBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +271,7 @@ template&lt;typename T , std::size_t Capacity&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

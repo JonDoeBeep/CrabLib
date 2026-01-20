@@ -3,7 +3,7 @@ var classcrab_1_1StaticRingBuffer =
     [ "size_type", "classcrab_1_1StaticRingBuffer.html#a31389552331601072abc11fd1ca9a180", null ],
     [ "value_type", "classcrab_1_1StaticRingBuffer.html#aadea9b1c6c9d926391ca3c079a527677", null ],
     [ "StaticRingBuffer", "classcrab_1_1StaticRingBuffer.html#acfa9d2a8a44d8ef505467c20edbd6ae9", null ],
-    [ "~StaticRingBuffer", "classcrab_1_1StaticRingBuffer.html#ae31d4085662ca223a26699ac346a52f7", null ],
+    [ "~StaticRingBuffer", "classcrab_1_1StaticRingBuffer.html#a1f8808daeb6d9f0b6236ad0796676feb", null ],
     [ "StaticRingBuffer", "classcrab_1_1StaticRingBuffer.html#aa3e4bded1ce81b34c70fa466f17a9bff", null ],
     [ "StaticRingBuffer", "classcrab_1_1StaticRingBuffer.html#a787b74961b9d13ffb250e8ca17d2345d", null ],
     [ "capacity", "classcrab_1_1StaticRingBuffer.html#a8987f03dc1f5bf5377530a1637311d97", null ],

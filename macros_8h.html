@@ -258,7 +258,7 @@ Customization</h2>
 </div><!-- fragment -->
 <p>Intentionally mark unreachable code. </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00151">151</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00152">152</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>
@@ -283,12 +283,12 @@ Customization</h2>
 <b>Value:</b><div class="fragment"><div class="line">    ((expr).is_ok() ? (expr).unwrap() : (default_val))</div>
 </div><!-- fragment -->
 <p>Early return if Result is Err. </p>
-<p>Usage: Result&lt;int, Error&gt; foo() { auto val = CRAB_TRY(may_fail()); return Result&lt;int, Error&gt;::Ok(val + 1); }</p>
+<p>Usage: Result&lt;int, Error&gt; foo() { auto val = CRAB_TRY(may_fail()); return <a class="el" href="namespacecrab.html#a76ff019ab3eed9f7313d6b5c2390a4e4" title="Factory function to create an Ok result.">crab::Ok</a>(val + 1); }</p>
 <p>Expands to unwrap-or-return-error pattern.</p>
 <dl class="section note"><dt>Note</dt><dd>Requires GCC/Clang statement expressions ({ }).</dd></dl>
 <p>Unwrap or return a default value. </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00140">140</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00141">141</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>

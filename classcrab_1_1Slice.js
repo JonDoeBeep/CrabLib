@@ -41,5 +41,7 @@ var classcrab_1_1Slice =
     [ "operator[]", "classcrab_1_1Slice.html#a59543e750fa2a2ed4c883f1438cc2f88", null ],
     [ "size", "classcrab_1_1Slice.html#aab42409dc29cf2a02df69f2ad6fb0120", null ],
     [ "skip", "classcrab_1_1Slice.html#abcfaf7a61c6ff2623497583571701776", null ],
-    [ "subslice", "classcrab_1_1Slice.html#a2b8adbd65659ca1af0e77ba2f9a1ef8a", null ]
+    [ "subslice", "classcrab_1_1Slice.html#a2b8adbd65659ca1af0e77ba2f9a1ef8a", null ],
+    [ "unchecked", "classcrab_1_1Slice.html#a672cb393c224884538f0b94eb5df3dc2", null ],
+    [ "unchecked", "classcrab_1_1Slice.html#aae0a2bab18d0aae0e0c5550020d2e909", null ]
 ];

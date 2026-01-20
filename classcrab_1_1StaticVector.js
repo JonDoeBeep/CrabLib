@@ -47,5 +47,7 @@ var classcrab_1_1StaticVector =
     [ "try_push_back", "classcrab_1_1StaticVector.html#ad0cb121c197c9382a2de9017a7f58c7f", null ],
     [ "try_push_back", "classcrab_1_1StaticVector.html#a9e05dd30d9cdd69b69c09f68c1609583", null ],
     [ "try_reserve", "classcrab_1_1StaticVector.html#acff5fdd8d064794ad1be5bb78dfe3d53", null ],
-    [ "try_resize", "classcrab_1_1StaticVector.html#af97f85cef5d59566c87d78ed2a3eee96", null ]
+    [ "try_resize", "classcrab_1_1StaticVector.html#af97f85cef5d59566c87d78ed2a3eee96", null ],
+    [ "unchecked", "classcrab_1_1StaticVector.html#a44342e918d329f945d40e83e511a533c", null ],
+    [ "unchecked", "classcrab_1_1StaticVector.html#a931e9d6633f2cc485f1fa25c44de23b5", null ]
 ];
