@@ -167,15 +167,26 @@ public:
     }
 
     /**
-     * @brief Access element by index (debug bounds checked).
+     * @brief Element access (bounds-checked unless CRAB_UNSAFE_FAST).
      */
     [[nodiscard]] T& operator[](size_type index) noexcept {
-        CRAB_DEBUG_ASSERT(index < m_size, "StaticVector index out of bounds");
+        CRAB_ASSERT(index < m_size, "StaticVector index out of bounds");
         return data()[index];
     }
     
     [[nodiscard]] const T& operator[](size_type index) const noexcept {
-        CRAB_DEBUG_ASSERT(index < m_size, "StaticVector index out of bounds");
+        CRAB_ASSERT(index < m_size, "StaticVector index out of bounds");
+        return data()[index];
+    }
+    
+    /**
+     * @brief Unchecked element access (explicit unsafe opt-in).
+     */
+    [[nodiscard]] T& unchecked(size_type index) noexcept {
+        return data()[index];
+    }
+    
+    [[nodiscard]] const T& unchecked(size_type index) const noexcept {
         return data()[index];
     }
 

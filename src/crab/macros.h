@@ -114,7 +114,7 @@ namespace crab {
  * Usage:
  *   Result<int, Error> foo() {
  *       auto val = CRAB_TRY(may_fail());
- *       return Result<int, Error>::Ok(val + 1);
+ *       return crab::Ok(val + 1);
  *   }
  * 
  * Expands to unwrap-or-return-error pattern.
@@ -124,11 +124,12 @@ namespace crab {
 #if defined(__GNUC__) || defined(__clang__)
 #define CRAB_TRY(expr) \
     ({ \
-        auto&& _result = (expr); \
-        if (_result.is_err()) { \
-            return decltype(_result)(crab::Err(_result.unwrap_err())); \
+        auto _crab_tmp = (expr); \
+        using _CrabR = std::decay_t<decltype(_crab_tmp)>; \
+        if (_crab_tmp.is_err()) { \
+            return _CrabR(crab::Err(_crab_tmp.unwrap_err())); \
         } \
-        _result.unwrap(); \
+        _crab_tmp.unwrap(); \
     })
 #else
     #error "CRAB_TRY requires GCC or Clang. Use explicit if-checks on other compilers."

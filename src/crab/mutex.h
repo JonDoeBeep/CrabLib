@@ -118,20 +118,20 @@ public:
          * @brief Access the protected data.
          */
         [[nodiscard]] T& operator*() noexcept { 
-            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            CRAB_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
             return *m_data; 
         }
         [[nodiscard]] const T& operator*() const noexcept { 
-            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            CRAB_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
             return *m_data; 
         }
         
         [[nodiscard]] T* operator->() noexcept { 
-            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            CRAB_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
             return m_data; 
         }
         [[nodiscard]] const T* operator->() const noexcept { 
-            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            CRAB_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
             return m_data; 
         }
         

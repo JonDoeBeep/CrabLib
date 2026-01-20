@@ -49,13 +49,13 @@ public:
     /**
      * @brief Destructor, properly destructs any remaining elements.
      */
-    ~StaticRingBuffer() {
+    ~StaticRingBuffer() noexcept(std::is_nothrow_destructible_v<T>) {
         if constexpr (!std::is_trivially_destructible_v<T>) {
             // Destruct all elements between head and tail
             size_type head = m_head.load(std::memory_order_relaxed);
             const size_type tail = m_tail.load(std::memory_order_relaxed);
             while (head != tail) {
-                std::launder(reinterpret_cast<T*>(&m_storage[head]))->~T();
+                slot_ptr(head)->~T();
                 head = increment(head);
             }
         }
@@ -235,7 +235,6 @@ public:
         }
         m_head.store(0, std::memory_order_relaxed);
         m_tail.store(0, std::memory_order_relaxed);
-        std::atomic_thread_fence(std::memory_order_release);
     }
     
 private:

@@ -148,18 +148,30 @@ public:
     }
     
     /**
-     * @brief Unchecked element access (debug-asserted).
+     * @brief Element access (bounds-checked unless CRAB_UNSAFE_FAST).
      * 
-     * In debug builds: panics on out-of-bounds.
-     * In release builds: undefined behavior on out-of-bounds.
+     * Use unchecked() for explicit unsafe access in critical hot paths.
      */
     [[nodiscard]] reference operator[](size_type index) noexcept {
-        CRAB_DEBUG_ASSERT(index < m_size, "Slice index out of bounds");
+        CRAB_ASSERT(index < m_size, "Slice index out of bounds");
         return m_data[index];
     }
     
     [[nodiscard]] const_reference operator[](size_type index) const noexcept {
-        CRAB_DEBUG_ASSERT(index < m_size, "Slice index out of bounds");
+        CRAB_ASSERT(index < m_size, "Slice index out of bounds");
+        return m_data[index];
+    }
+    
+    /**
+     * @brief Unchecked element access (explicit unsafe opt-in).
+     * 
+     * @warning No bounds checking. Caller accepts UB risk.
+     */
+    [[nodiscard]] reference unchecked(size_type index) noexcept {
+        return m_data[index];
+    }
+    
+    [[nodiscard]] const_reference unchecked(size_type index) const noexcept {
         return m_data[index];
     }
     
