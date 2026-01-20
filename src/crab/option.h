@@ -304,6 +304,11 @@ public:
      */
     template<typename SomeFn, typename NoneFn>
     [[nodiscard]] auto match(SomeFn&& some_fn, NoneFn&& none_fn) && {
+        using SomeResult = std::invoke_result_t<SomeFn, T>;
+        using NoneResult = std::invoke_result_t<NoneFn>;
+        static_assert(std::is_same_v<SomeResult, NoneResult>,
+            "Option::match branches must return the same type");
+        
         if (is_some()) {
             return some_fn(std::move(*m_inner));
         }
@@ -312,6 +317,11 @@ public:
     
     template<typename SomeFn, typename NoneFn>
     [[nodiscard]] auto match(SomeFn&& some_fn, NoneFn&& none_fn) const & {
+        using SomeResult = std::invoke_result_t<SomeFn, const T&>;
+        using NoneResult = std::invoke_result_t<NoneFn>;
+        static_assert(std::is_same_v<SomeResult, NoneResult>,
+            "Option::match branches must return the same type");
+        
         if (is_some()) {
             return some_fn(*m_inner);
         }

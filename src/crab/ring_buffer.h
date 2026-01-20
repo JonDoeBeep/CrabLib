@@ -14,9 +14,9 @@
 #include "crab/option.h"
 #include "crab/macros.h"
 
-#include <array>
 #include <atomic>
 #include <cstddef>
+#include <new>
 #include <type_traits>
 #include <utility>
 
@@ -28,19 +28,8 @@ namespace crab {
  * Provides wait-free push/pop operations for real-time systems.
  * Uses acquire/release memory ordering for proper synchronization.
  * 
- * @tparam T Element type (should be trivially copyable for best performance)
+ * @tparam T Element type
  * @tparam Capacity Maximum number of elements (actual usable = Capacity - 1)
- * 
- * @code{cpp}
- *   // Producer thread
- *   crab::StaticRingBuffer<SensorData, 64> buffer;
- *   buffer.try_push(SensorData{...});
- *   
- *   // Consumer thread
- *   if (auto data = buffer.try_pop(); data.is_some()) {
- *       process(data.unwrap());
- *   }
- * @endcode
  * 
  * @note The actual capacity is Capacity - 1 to distinguish full from empty.
  */
@@ -55,11 +44,19 @@ public:
     /**
      * @brief Default constructor, creates empty buffer.
      */
-    StaticRingBuffer() noexcept : m_head(0), m_tail(0) {
-        // Default-construct all elements if not trivially constructible
-        if constexpr (!std::is_trivially_default_constructible_v<T>) {
-            for (auto& elem : m_buffer) {
-                new (&elem) T();
+    StaticRingBuffer() noexcept : m_head(0), m_tail(0) {}
+    
+    /**
+     * @brief Destructor, properly destructs any remaining elements.
+     */
+    ~StaticRingBuffer() {
+        if constexpr (!std::is_trivially_destructible_v<T>) {
+            // Destruct all elements between head and tail
+            size_type head = m_head.load(std::memory_order_relaxed);
+            const size_type tail = m_tail.load(std::memory_order_relaxed);
+            while (head != tail) {
+                std::launder(reinterpret_cast<T*>(&m_storage[head]))->~T();
+                head = increment(head);
             }
         }
     }
@@ -82,19 +79,19 @@ public:
      * 
      * @note Wait-free, O(1)
      */
-    [[nodiscard]] bool try_push(const T& value) noexcept {
+    [[nodiscard]] bool try_push(const T& value) 
+        noexcept(std::is_nothrow_copy_constructible_v<T>) 
+    {
         const size_type current_tail = m_tail.load(std::memory_order_relaxed);
         const size_type next_tail = increment(current_tail);
         
-        // Check if buffer is full
         if (next_tail == m_head.load(std::memory_order_acquire)) {
             return false;
         }
         
-        // Store the element
-        m_buffer[current_tail] = value;
+        // Construct in-place using placement new
+        new (slot_ptr(current_tail)) T(value);
         
-        // Publish the new tail (release ensures element is visible)
         m_tail.store(next_tail, std::memory_order_release);
         return true;
     }
@@ -102,7 +99,9 @@ public:
     /**
      * @brief Try to push an element by move (producer only).
      */
-    [[nodiscard]] bool try_push(T&& value) noexcept {
+    [[nodiscard]] bool try_push(T&& value) 
+        noexcept(std::is_nothrow_move_constructible_v<T>)
+    {
         const size_type current_tail = m_tail.load(std::memory_order_relaxed);
         const size_type next_tail = increment(current_tail);
         
@@ -110,7 +109,7 @@ public:
             return false;
         }
         
-        m_buffer[current_tail] = std::move(value);
+        new (slot_ptr(current_tail)) T(std::move(value));
         m_tail.store(next_tail, std::memory_order_release);
         return true;
     }
@@ -119,7 +118,9 @@ public:
      * @brief Try to emplace an element in-place (producer only).
      */
     template<typename... Args>
-    [[nodiscard]] bool try_emplace(Args&&... args) noexcept {
+    [[nodiscard]] bool try_emplace(Args&&... args) 
+        noexcept(std::is_nothrow_constructible_v<T, Args...>)
+    {
         const size_type current_tail = m_tail.load(std::memory_order_relaxed);
         const size_type next_tail = increment(current_tail);
         
@@ -127,8 +128,7 @@ public:
             return false;
         }
         
-        // Construct in-place
-        new (&m_buffer[current_tail]) T(std::forward<Args>(args)...);
+        new (slot_ptr(current_tail)) T(std::forward<Args>(args)...);
         m_tail.store(next_tail, std::memory_order_release);
         return true;
     }
@@ -152,18 +152,21 @@ public:
      * 
      * @note Wait-free, O(1)
      */
-    [[nodiscard]] Option<T> try_pop() noexcept {
+    [[nodiscard]] Option<T> try_pop() 
+        noexcept(std::is_nothrow_move_constructible_v<T> && 
+                 std::is_nothrow_destructible_v<T>)
+    {
         const size_type current_head = m_head.load(std::memory_order_relaxed);
         
-        // Check if buffer is empty
         if (current_head == m_tail.load(std::memory_order_acquire)) {
             return None;
         }
         
-        // Read the element
-        T value = std::move(m_buffer[current_head]);
+        // Move out and destruct
+        T* ptr = slot_ptr(current_head);
+        T value = std::move(*ptr);
+        ptr->~T();
         
-        // Publish the new head (release for proper ordering)
         m_head.store(increment(current_head), std::memory_order_release);
         
         return Some(std::move(value));
@@ -181,7 +184,7 @@ public:
             return nullptr;
         }
         
-        return &m_buffer[current_head];
+        return slot_ptr(current_head);
     }
     
     /**
@@ -197,9 +200,7 @@ public:
     // ========================================================================
     
     /**
-     * @brief Get approximate size (may be stale).
-     * 
-     * @note This is only an approximation due to concurrent access.
+     * @brief Get approximate size (may be stale due to concurrent access).
      */
     [[nodiscard]] size_type size_approx() const noexcept {
         const size_type head = m_head.load(std::memory_order_acquire);
@@ -223,9 +224,18 @@ public:
      * 
      * @warning Only call when no other threads are accessing the buffer.
      */
-    void clear_unsafe() noexcept {
+    void clear_unsafe() noexcept(std::is_nothrow_destructible_v<T>) {
+        if constexpr (!std::is_trivially_destructible_v<T>) {
+            size_type head = m_head.load(std::memory_order_relaxed);
+            const size_type tail = m_tail.load(std::memory_order_relaxed);
+            while (head != tail) {
+                slot_ptr(head)->~T();
+                head = increment(head);
+            }
+        }
         m_head.store(0, std::memory_order_relaxed);
         m_tail.store(0, std::memory_order_relaxed);
+        std::atomic_thread_fence(std::memory_order_release);
     }
     
 private:
@@ -233,8 +243,16 @@ private:
         return (index + 1) % Capacity;
     }
     
-    // Storage aligned for cache efficiency
-    alignas(64) std::array<T, Capacity> m_buffer{};
+    [[nodiscard]] T* slot_ptr(size_type index) noexcept {
+        return std::launder(reinterpret_cast<T*>(&m_storage[index * sizeof(T)]));
+    }
+    
+    [[nodiscard]] const T* slot_ptr(size_type index) const noexcept {
+        return std::launder(reinterpret_cast<const T*>(&m_storage[index * sizeof(T)]));
+    }
+    
+    // Aligned storage, elements constructed/destructed manually
+    alignas(64) alignas(T) unsigned char m_storage[sizeof(T) * Capacity];
     
     // Head and tail on separate cache lines to avoid false sharing
     alignas(64) std::atomic<size_type> m_head;

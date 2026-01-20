@@ -209,8 +209,11 @@ public:
      */
     [[nodiscard]] Result<Slice, OutOfBounds> 
     subslice(size_type start, size_type end) const noexcept {
-        if (start > end || end > m_size) {
-            return Err(OutOfBounds{end, m_size});
+        if (start > end) {
+            return Err(OutOfBounds{start, end}); // start > end case
+        }
+        if (end > m_size) {
+            return Err(OutOfBounds{end, m_size}); // bounds case
         }
         return Ok(Slice(m_data + start, end - start));
     }
@@ -246,15 +249,16 @@ public:
     /**
      * @brief Copy contents to another slice.
      * 
-     * @param dest Destination slice (must be same size)
-     * @return Ok if copy succeeded, Err if sizes don't match
+     * @param dest Destination slice (must be at least as large as source)
+     * @return Ok if copy succeeded, Err if dest is too small
+     * @note Uses memmove, safe for overlapping ranges.
      */
     Result<Unit, OutOfBounds> copy_to(Slice<std::remove_const_t<T>> dest) const noexcept {
         if (dest.size() < m_size) {
             return Err(OutOfBounds{m_size, dest.size()});
         }
         if constexpr (std::is_trivially_copyable_v<T>) {
-            std::memcpy(dest.data(), m_data, m_size * sizeof(T));
+            std::memmove(dest.data(), m_data, m_size * sizeof(T));
         } else {
             for (size_type i = 0; i < m_size; ++i) {
                 dest[i] = m_data[i];
@@ -268,14 +272,16 @@ public:
      * 
      * @param src Source slice (must fit in this slice)
      * @return Ok if copy succeeded, Err if source is too large
+     * @note Uses memmove, safe for overlapping ranges.
+     * @note Only available for non-const Slice.
      */
+    template<typename U = T, typename = std::enable_if_t<!std::is_const_v<U>>>
     Result<Unit, OutOfBounds> copy_from(Slice<const T> src) noexcept {
-        static_assert(!std::is_const_v<T>, "Cannot copy into const Slice");
         if (src.size() > m_size) {
             return Err(OutOfBounds{src.size(), m_size});
         }
         if constexpr (std::is_trivially_copyable_v<T>) {
-            std::memcpy(m_data, src.data(), src.size() * sizeof(T));
+            std::memmove(m_data, src.data(), src.size() * sizeof(T));
         } else {
             for (size_type i = 0; i < src.size(); ++i) {
                 m_data[i] = src[i];

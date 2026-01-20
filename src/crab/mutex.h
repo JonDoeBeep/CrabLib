@@ -10,7 +10,9 @@
  */
 
 #include "crab/option.h"
+#include "crab/macros.h"
 
+#include <chrono>
 #include <mutex>
 #include <utility>
 
@@ -72,11 +74,23 @@ public:
         /**
          * @brief Access the protected data.
          */
-        [[nodiscard]] T& operator*() noexcept { return *m_data; }
-        [[nodiscard]] const T& operator*() const noexcept { return *m_data; }
+        [[nodiscard]] T& operator*() noexcept { 
+            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            return *m_data; 
+        }
+        [[nodiscard]] const T& operator*() const noexcept { 
+            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            return *m_data; 
+        }
         
-        [[nodiscard]] T* operator->() noexcept { return m_data; }
-        [[nodiscard]] const T* operator->() const noexcept { return m_data; }
+        [[nodiscard]] T* operator->() noexcept { 
+            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            return m_data; 
+        }
+        [[nodiscard]] const T* operator->() const noexcept { 
+            CRAB_DEBUG_ASSERT(m_data != nullptr, "Dereferencing moved-from Guard");
+            return m_data; 
+        }
         
         /**
          * @brief Get raw pointer to data.
@@ -136,6 +150,20 @@ public:
      */
     [[nodiscard]] Option<Guard> try_lock() {
         std::unique_lock<std::mutex> lock(m_mutex, std::try_to_lock);
+        if (lock.owns_lock()) {
+            return Some(Guard(std::move(lock), m_data));
+        }
+        return None;
+    }
+    
+    /**
+     * @brief Try to acquire lock with timeout.
+     * @param timeout Maximum time to wait for lock
+     * @return Some(Guard) if lock acquired, None if timeout expired
+     */
+    template<typename Rep, typename Period>
+    [[nodiscard]] Option<Guard> try_lock_for(std::chrono::duration<Rep, Period> timeout) {
+        std::unique_lock<std::mutex> lock(m_mutex, timeout);
         if (lock.owns_lock()) {
             return Some(Guard(std::move(lock), m_data));
         }

@@ -61,15 +61,27 @@ namespace crab {
  *   }
  * 
  * Expands to unwrap-or-return-error pattern.
+ * 
+ * @note Requires GCC/Clang statement expressions ({ }).
+ *       @code
+ *       auto result = may_fail();
+ *       if (result.is_err()) return Err(result.unwrap_err());
+ *       auto val = result.unwrap();
+ *       @endcode
  */
+#if defined(__GNUC__) || defined(__clang__)
 #define CRAB_TRY(expr) \
     ({ \
         auto&& _result = (expr); \
         if (_result.is_err()) { \
-            return decltype(_result)::Err(_result.unwrap_err()); \
+            return decltype(_result)(crab::Err(_result.unwrap_err())); \
         } \
         _result.unwrap(); \
     })
+#else
+    // MSVC: No statement expression support
+    #error "CRAB_TRY requires GCC or Clang. Use explicit if-checks on MSVC."
+#endif
 
 /**
  * @brief Unwrap or return a default value.

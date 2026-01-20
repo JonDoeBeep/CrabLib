@@ -291,18 +291,20 @@ public:
     /**
      * @brief Chain operations that return Result.
      * 
-     * If Ok, applies fn to value (fn must return a Result).
+     * If Ok, applies fn to value (fn must return a Result with same error type).
      * If Err, returns the error unchanged.
      */
     template<typename F>
     [[nodiscard]] auto and_then(F&& fn) &&
         -> std::invoke_result_t<F, T>
     {
+        using ReturnType = std::invoke_result_t<F, T>;
+        static_assert(std::is_same_v<typename ReturnType::error_type, E>,
+            "and_then: function must return Result with same error type E");
+        
         if (is_ok()) {
             return fn(std::get<0>(std::move(m_storage)));
         }
-        // Propagate error - need to construct new Result with same error type
-        using ReturnType = std::invoke_result_t<F, T>;
         return crab::Err(std::get<1>(std::move(m_storage)));
     }
     
