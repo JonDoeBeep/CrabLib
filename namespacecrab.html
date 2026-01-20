@@ -153,16 +153,22 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrab_1_1StaticVector.html">StaticVector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed-capacity vector with no heap allocation.  <a href="classcrab_1_1StaticVector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrab_1_1StdMutexLock.html">StdMutexLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default lock type using std::mutex.  <a href="structcrab_1_1StdMutexLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrab_1_1Unit.html">Unit</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic unit type (for Result&lt;void, E&gt; specialization).  <a href="structcrab_1_1Unit.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:affb2becb9fc3dd4b3d2d68eb7118bc24" id="r_affb2becb9fc3dd4b3d2d68eb7118bc24"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:affb2becb9fc3dd4b3d2d68eb7118bc24"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#affb2becb9fc3dd4b3d2d68eb7118bc24">MutexGuard</a> = typename <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt;T&gt;::Guard</td></tr>
-<tr class="memdesc:affb2becb9fc3dd4b3d2d68eb7118bc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII lock guard with scope-based automatic unlock.  <br /></td></tr>
-<tr class="separator:affb2becb9fc3dd4b3d2d68eb7118bc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab02cb04b7f4578c36f6b32baed8c847" id="r_aab02cb04b7f4578c36f6b32baed8c847"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab02cb04b7f4578c36f6b32baed8c847">PanicHandler</a> = void(*)(const char* msg, const char* file, int line)</td></tr>
+<tr class="memdesc:aab02cb04b7f4578c36f6b32baed8c847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Panic handler signature.  <br /></td></tr>
+<tr class="separator:aab02cb04b7f4578c36f6b32baed8c847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65924c1fe958e3a22cca545194005e09" id="r_a65924c1fe958e3a22cca545194005e09"><td class="memTemplParams" colspan="2">template&lt;typename T , typename LockType  = StdMutexLock&gt; </td></tr>
+<tr class="memitem:a65924c1fe958e3a22cca545194005e09"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a65924c1fe958e3a22cca545194005e09">MutexGuard</a> = typename <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt;T, LockType&gt;::Guard</td></tr>
+<tr class="memdesc:a65924c1fe958e3a22cca545194005e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII lock guard with scope-based automatic unlock.  <br /></td></tr>
+<tr class="separator:a65924c1fe958e3a22cca545194005e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea00698e15f091890043a5a240b06a3" id="r_a7ea00698e15f091890043a5a240b06a3"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
 <tr class="memitem:a7ea00698e15f091890043a5a240b06a3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7ea00698e15f091890043a5a240b06a3">VoidResult</a> = <a class="el" href="classcrab_1_1Result.html">Result</a>&lt;<a class="el" href="structcrab_1_1Unit.html">Unit</a>, E&gt;</td></tr>
 <tr class="memdesc:a7ea00698e15f091890043a5a240b06a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a> with <a class="el" href="structcrab_1_1Unit.html" title="Generic unit type (for Result&lt;void, E&gt; specialization).">Unit</a> as success type (for void operations).  <br /></td></tr>
@@ -182,7 +188,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a773a0ed082c670eb29cdf5b517a276a8" id="r_a773a0ed082c670eb29cdf5b517a276a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a773a0ed082c670eb29cdf5b517a276a8">panic</a> (const char *msg, const char *file, int line)</td></tr>
-<tr class="memdesc:a773a0ed082c670eb29cdf5b517a276a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an assertion or unwrap fails.  <br /></td></tr>
+<tr class="memdesc:a773a0ed082c670eb29cdf5b517a276a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default panic handler: prints message and aborts.  <br /></td></tr>
 <tr class="separator:a773a0ed082c670eb29cdf5b517a276a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1da763ed0c6f937fecc16e891b2015a" id="r_ab1da763ed0c6f937fecc16e891b2015a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab1da763ed0c6f937fecc16e891b2015a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; std::decay_t&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab1da763ed0c6f937fecc16e891b2015a">Some</a> (T &amp;&amp;value)</td></tr>
@@ -215,7 +221,7 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>CrabLib: Rust-inspired memory safety for C++17. </p>
 <p>CrabLib provides runtime memory safety guarantees for C++17 codebases where exceptions are disabled (-fno-exceptions) and real-time performance is critical.</p>
-<h2><a class="anchor" id="autotoc_md0"></a>
+<h2><a class="anchor" id="autotoc_md2"></a>
 Core Types</h2>
 <ul>
 <li><code><a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">crab::Result</a>&lt;T, E&gt;</code>: Error handling without exceptions</li>
@@ -224,7 +230,7 @@ Core Types</h2>
 <li><code><a class="el" href="classcrab_1_1StaticVector.html" title="Fixed-capacity vector with no heap allocation.">crab::StaticVector</a>&lt;T, N&gt;</code>: Fixed-capacity vector (no heap)</li>
 <li><code><a class="el" href="classcrab_1_1Mutex.html" title="Data-owning mutex (Rust-style).">crab::Mutex</a>&lt;T&gt;</code>: Data-owning mutex (Rust pattern)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Quick Start</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="prelude_8h.html">crab/prelude.h</a>&gt;</span></div>
 <div class="line"> </div>
@@ -300,24 +306,23 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="affb2becb9fc3dd4b3d2d68eb7118bc24" name="affb2becb9fc3dd4b3d2d68eb7118bc24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affb2becb9fc3dd4b3d2d68eb7118bc24">&#9670;&#160;</a></span>MutexGuard</h2>
+<a id="a65924c1fe958e3a22cca545194005e09" name="a65924c1fe958e3a22cca545194005e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65924c1fe958e3a22cca545194005e09">&#9670;&#160;</a></span>MutexGuard</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#affb2becb9fc3dd4b3d2d68eb7118bc24">crab::MutexGuard</a> = typename <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt;T&gt;::Guard</td>
+          <td class="memname">using <a class="el" href="#a65924c1fe958e3a22cca545194005e09">crab::MutexGuard</a> = typename <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt;T, LockType&gt;::Guard</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>RAII lock guard with scope-based automatic unlock. </p>
-<p>For cases where you need the guard to outlive its creation scope but still want deterministic unlock behavior. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00200">200</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00245">245</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 
 </div>
 </div>
@@ -339,6 +344,24 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="aab02cb04b7f4578c36f6b32baed8c847" name="aab02cb04b7f4578c36f6b32baed8c847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab02cb04b7f4578c36f6b32baed8c847">&#9670;&#160;</a></span>PanicHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#aab02cb04b7f4578c36f6b32baed8c847">crab::PanicHandler</a> = void(*)(const char* msg, const char* file, int line)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Panic handler signature. </p>
+
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00043">43</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+
+</div>
+</div>
 <a id="a7ea00698e15f091890043a5a240b06a3" name="a7ea00698e15f091890043a5a240b06a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ea00698e15f091890043a5a240b06a3">&#9670;&#160;</a></span>VoidResult</h2>
 
@@ -355,7 +378,7 @@ template&lt;typename E &gt; </div>
 
 <p><a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a> with <a class="el" href="structcrab_1_1Unit.html" title="Generic unit type (for Result&lt;void, E&gt; specialization).">Unit</a> as success type (for void operations). </p>
 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00358">358</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00400">400</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 
 </div>
 </div>
@@ -480,10 +503,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Called when an assertion or unwrap fails. </p>
-<p>In debug builds, prints message and aborts. In release builds with CRAB_UNSAFE_FAST, this is undefined behavior. </p>
+<p>Default panic handler: prints message and aborts. </p>
+<p>To use a custom handler (e.g., for bare-metal), define CRAB_CUSTOM_PANIC and implement crab_panic_handler() in your code. </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00022">22</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00077">77</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>

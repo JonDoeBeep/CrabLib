@@ -1,7 +1,0 @@
-<map id="crab::Mutex::lock" name="crab::Mutex::lock">
-<area shape="rect" id="Node000001" title="Acquire exclusive lock, blocking until available." alt="" coords="214,31,331,56"/>
-<area shape="rect" id="Node000002" href="$classcrab_1_1Mutex.html#a368df75fc77a3bff0309d9b72d65c23e" title="Try to acquire lock without blocking." alt="" coords="16,5,155,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,36,154,30,155,25,198,31"/>
-<area shape="rect" id="Node000003" href="$classcrab_1_1Mutex.html#a426edd639d6aeb60c972c86de81ddce4" title="Try to acquire lock with timeout." alt="" coords="5,55,166,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,56,167,60,166,54,198,50"/>
-</map>

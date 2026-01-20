@@ -106,7 +106,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="textblock"><p><a class="anchor" id="md__2github_2workspace_2README"></a></p>
 <p>Memory safety primitives for C++17 embedded systems.</p>
 <p>CrabLib provides runtime safety guarantees for codebases where exceptions are disabled (<code>-fno-exceptions</code>) and real-time performance is required. Header-only.</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Usage</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="prelude_8h.html">crab/prelude.h</a>&gt;</span></div>
 <div class="line"> </div>
@@ -119,19 +119,19 @@ Usage</h1>
 <div class="ttc" id="aclasscrab_1_1Slice_html_af2c91da11311a6356400f592dddc047e"><div class="ttname"><a href="classcrab_1_1Slice.html#af2c91da11311a6356400f592dddc047e">crab::Slice::get</a></div><div class="ttdeci">Result&lt; std::reference_wrapper&lt; T &gt;, OutOfBounds &gt; get(size_type index) noexcept</div><div class="ttdoc">Get element with bounds checking, returning Result.</div><div class="ttdef"><b>Definition</b> <a href="slice_8h_source.html#l00135">slice.h:135</a></div></div>
 <div class="ttc" id="anamespacecrab_html_a9085393618393c23f64c2525f2c1961f"><div class="ttname"><a href="namespacecrab.html#a9085393618393c23f64c2525f2c1961f">crab::Ok</a></div><div class="ttdeci">detail::OkTag&lt; Unit &gt; Ok()</div><div class="ttdoc">Factory function for Ok with void/Unit result.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00065">result.h:65</a></div></div>
 <div class="ttc" id="aprelude_8h_html"><div class="ttname"><a href="prelude_8h.html">prelude.h</a></div><div class="ttdoc">Single-include header for all CrabLib types.</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
 Installation</h1>
 <p>Add as CMake subdirectory:</p>
 <div class="fragment"><div class="line">add_subdirectory(CrabLib)</div>
 <div class="line">target_link_libraries(your_target PRIVATE crab::crab)</div>
 </div><!-- fragment --><p>Or copy <code>src/crab/</code> to your include path.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Requirements</h1>
 <ul>
 <li>C++17</li>
-<li>Tested with GCC 13.3, Clang, MSVC</li>
+<li>Tested with GCC 13.3 and Clang</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Build Modes</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -143,7 +143,7 @@ Build Modes</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Release + <code>CRAB_UNSAFE_FAST</code>   </td><td class="markdownTableBodyNone">None   </td><td class="markdownTableBodyNone">Maximum   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 License</h1>
 <p>MIT </p>
 </div></div><!-- PageDoc -->

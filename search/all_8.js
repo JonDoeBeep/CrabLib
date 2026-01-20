@@ -1,6 +1,6 @@
 var searchData=
 [
   ['last_0',['last',['../classcrab_1_1Slice.html#af481ed8b9f02cd535bacf083db83420a',1,'crab::Slice']]],
-  ['license_1',['License',['../index.html#autotoc_md7',1,'']]],
-  ['lock_2',['lock',['../classcrab_1_1Mutex.html#a6c22e94e6ff9f68874d39fc41b2c6bbc',1,'crab::Mutex']]]
+  ['license_1',['License',['../index.html#autotoc_md9',1,'']]],
+  ['lock_2',['lock',['../structcrab_1_1StdMutexLock.html#a9fddc0f3f4ab00159bdb4faee2478221',1,'crab::StdMutexLock::lock()'],['../classcrab_1_1Mutex.html#aa98d54eade710ec4cfb52db8479106e4',1,'crab::Mutex::lock()']]]
 ];

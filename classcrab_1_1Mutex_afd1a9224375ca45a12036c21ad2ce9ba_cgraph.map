@@ -1,0 +1,5 @@
+<map id="crab::Mutex::try_lock_for" name="crab::Mutex::try_lock_for">
+<area shape="rect" id="Node000001" title="Try to acquire lock with timeout." alt="" coords="5,5,166,31"/>
+<area shape="rect" id="Node000002" href="$namespacecrab.html#ab1da763ed0c6f937fecc16e891b2015a" title="Create an Option containing a value." alt="" coords="214,5,300,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,198,16,198,21,166,21"/>
+</map>

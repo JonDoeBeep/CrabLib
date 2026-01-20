@@ -103,6 +103,7 @@ $(function(){initNavTree('macros_8h.html',''); initResizable(true); });
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">macros.h File Reference</div></div>
 </div><!--header-->
@@ -133,6 +134,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a39932479095ecac7ea597b6bd74c6139" id="r_a39932479095ecac7ea597b6bd74c6139"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39932479095ecac7ea597b6bd74c6139">CRAB_CACHE_LINE_SIZE</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:a39932479095ecac7ea597b6bd74c6139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache line size for false-sharing prevention.  <br /></td></tr>
+<tr class="separator:a39932479095ecac7ea597b6bd74c6139"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a625741c2c0b90d8be4ec3c5701fdf1" id="r_a4a625741c2c0b90d8be4ec3c5701fdf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a625741c2c0b90d8be4ec3c5701fdf1">CRAB_DEBUG_ASSERT</a>(cond,  msg)</td></tr>
 <tr class="separator:a4a625741c2c0b90d8be4ec3c5701fdf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff9d5c63a35974a6cf9afed5d04bfa95" id="r_aff9d5c63a35974a6cf9afed5d04bfa95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff9d5c63a35974a6cf9afed5d04bfa95">CRAB_ASSERT</a>(cond,  msg)</td></tr>
@@ -144,15 +148,27 @@ Macros</h2></td></tr>
 <tr class="memdesc:ac3b59c8fa5a2e4c01967f8886d9e47f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intentionally mark unreachable code.  <br /></td></tr>
 <tr class="separator:ac3b59c8fa5a2e4c01967f8886d9e47f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aab02cb04b7f4578c36f6b32baed8c847" id="r_aab02cb04b7f4578c36f6b32baed8c847"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrab.html#aab02cb04b7f4578c36f6b32baed8c847">crab::PanicHandler</a> = void(*)(const char* msg, const char* file, int line)</td></tr>
+<tr class="memdesc:aab02cb04b7f4578c36f6b32baed8c847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Panic handler signature.  <br /></td></tr>
+<tr class="separator:aab02cb04b7f4578c36f6b32baed8c847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a773a0ed082c670eb29cdf5b517a276a8" id="r_a773a0ed082c670eb29cdf5b517a276a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrab.html#a773a0ed082c670eb29cdf5b517a276a8">crab::panic</a> (const char *msg, const char *file, int line)</td></tr>
-<tr class="memdesc:a773a0ed082c670eb29cdf5b517a276a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an assertion or unwrap fails.  <br /></td></tr>
+<tr class="memdesc:a773a0ed082c670eb29cdf5b517a276a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default panic handler: prints message and aborts.  <br /></td></tr>
 <tr class="separator:a773a0ed082c670eb29cdf5b517a276a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>CrabLib assertion and utility macros. </p>
-<p>Provides debug-mode assertions and helper macros for safe error handling. Designed for -fno-exceptions environments. </p>
+<p>Provides debug-mode assertions and helper macros for safe error handling. Designed for -fno-exceptions environments and bare-metal embedded.</p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Customization</h2>
+<ul>
+<li><code>CRAB_CUSTOM_PANIC</code>: Define before including to use custom panic handler</li>
+<li><code>CRAB_CACHE_LINE_SIZE</code>: Define to override default cache line (32 or 64) </li>
+</ul>
 
 <p class="definition">Definition in file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -175,9 +191,28 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">        <span class="keywordflow">do</span> { <span class="keywordflow">if</span> (!(cond)) { <a class="code hl_function" href="namespacecrab.html#a773a0ed082c670eb29cdf5b517a276a8">::crab::panic</a>(msg, __FILE__, __LINE__); } } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="anamespacecrab_html_a773a0ed082c670eb29cdf5b517a276a8"><div class="ttname"><a href="namespacecrab.html#a773a0ed082c670eb29cdf5b517a276a8">crab::panic</a></div><div class="ttdeci">void panic(const char *msg, const char *file, int line)</div><div class="ttdoc">Called when an assertion or unwrap fails.</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00022">macros.h:22</a></div></div>
+<div class="ttc" id="anamespacecrab_html_a773a0ed082c670eb29cdf5b517a276a8"><div class="ttname"><a href="namespacecrab.html#a773a0ed082c670eb29cdf5b517a276a8">crab::panic</a></div><div class="ttdeci">void panic(const char *msg, const char *file, int line)</div><div class="ttdoc">Default panic handler: prints message and aborts.</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00077">macros.h:77</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00046">46</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00103">103</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+
+</div>
+</div>
+<a id="a39932479095ecac7ea597b6bd74c6139" name="a39932479095ecac7ea597b6bd74c6139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39932479095ecac7ea597b6bd74c6139">&#9670;&#160;</a></span>CRAB_CACHE_LINE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CRAB_CACHE_LINE_SIZE&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cache line size for false-sharing prevention. </p>
+<p>Override by defining CRAB_CACHE_LINE_SIZE before including CrabLib. Default: 32 for ARM, 64 for x86/x64. </p>
+
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00030">30</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>
@@ -201,7 +236,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">        <span class="keywordflow">do</span> { <span class="keywordflow">if</span> (!(cond)) { <a class="code hl_function" href="namespacecrab.html#a773a0ed082c670eb29cdf5b517a276a8">::crab::panic</a>(msg, __FILE__, __LINE__); } } <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00044">44</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00101">101</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>
@@ -223,7 +258,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Intentionally mark unreachable code. </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00100">100</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00151">151</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>
@@ -250,13 +285,10 @@ Functions</h2></td></tr>
 <p>Early return if Result is Err. </p>
 <p>Usage: Result&lt;int, Error&gt; foo() { auto val = CRAB_TRY(may_fail()); return Result&lt;int, Error&gt;::Ok(val + 1); }</p>
 <p>Expands to unwrap-or-return-error pattern.</p>
-<dl class="section note"><dt>Note</dt><dd>Requires GCC/Clang statement expressions ({ }). <div class="fragment"><div class="line"><span class="keyword">auto</span> result = may_fail();</div>
-<div class="line"><span class="keywordflow">if</span> (result.is_err()) <span class="keywordflow">return</span> Err(result.unwrap_err());</div>
-<div class="line"><span class="keyword">auto</span> val = result.unwrap();</div>
-</div><!-- fragment --></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Requires GCC/Clang statement expressions ({ }).</dd></dl>
 <p>Unwrap or return a default value. </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00089">89</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00140">140</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
 
 </div>
 </div>

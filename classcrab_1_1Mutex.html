@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CrabLib: crab::Mutex&lt; T &gt; Class Template Reference</title>
+<title>CrabLib: crab::Mutex&lt; T, LockType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,7 +104,7 @@ $(function(){initNavTree('classcrab_1_1Mutex.html',''); initResizable(true); });
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classcrab_1_1Mutex-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">crab::Mutex&lt; T &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">crab::Mutex&lt; T, LockType &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -121,78 +121,65 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9cfd0768be1f6bf54f9b2d08aa6b41df" id="r_a9cfd0768be1f6bf54f9b2d08aa6b41df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cfd0768be1f6bf54f9b2d08aa6b41df">Mutex</a> ()</td></tr>
-<tr class="memdesc:a9cfd0768be1f6bf54f9b2d08aa6b41df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct mutex with default-constructed data.  <br /></td></tr>
-<tr class="separator:a9cfd0768be1f6bf54f9b2d08aa6b41df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d4ba2485129dba4ab8fe4b88399747e" id="r_a5d4ba2485129dba4ab8fe4b88399747e"><td class="memTemplParams" colspan="2">template&lt;typename U  = T, typename  = std::enable_if_t&lt;std::is_convertible_v&lt;U, T&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a5d4ba2485129dba4ab8fe4b88399747e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5d4ba2485129dba4ab8fe4b88399747e">Mutex</a> (U &amp;&amp;value)</td></tr>
-<tr class="memdesc:a5d4ba2485129dba4ab8fe4b88399747e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct mutex with given data.  <br /></td></tr>
-<tr class="separator:a5d4ba2485129dba4ab8fe4b88399747e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3057beaef5f36c1ade2586df7fe28962" id="r_a3057beaef5f36c1ade2586df7fe28962"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3057beaef5f36c1ade2586df7fe28962">Mutex</a> (const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;)=delete</td></tr>
-<tr class="separator:a3057beaef5f36c1ade2586df7fe28962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3dd06c7d88c6e2bbc084dccd2725141" id="r_aa3dd06c7d88c6e2bbc084dccd2725141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3dd06c7d88c6e2bbc084dccd2725141">operator=</a> (const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;)=delete</td></tr>
-<tr class="separator:aa3dd06c7d88c6e2bbc084dccd2725141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fb37afb4ca94b4d501098b07efd6f92" id="r_a5fb37afb4ca94b4d501098b07efd6f92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fb37afb4ca94b4d501098b07efd6f92">Mutex</a> (<a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:a5fb37afb4ca94b4d501098b07efd6f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fe27cc2515b38b79ae8202916fe7ff7" id="r_a8fe27cc2515b38b79ae8202916fe7ff7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fe27cc2515b38b79ae8202916fe7ff7">operator=</a> (<a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:a8fe27cc2515b38b79ae8202916fe7ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c22e94e6ff9f68874d39fc41b2c6bbc" id="r_a6c22e94e6ff9f68874d39fc41b2c6bbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c22e94e6ff9f68874d39fc41b2c6bbc">lock</a> ()</td></tr>
-<tr class="memdesc:a6c22e94e6ff9f68874d39fc41b2c6bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acquire exclusive lock, blocking until available.  <br /></td></tr>
-<tr class="separator:a6c22e94e6ff9f68874d39fc41b2c6bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368df75fc77a3bff0309d9b72d65c23e" id="r_a368df75fc77a3bff0309d9b72d65c23e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a368df75fc77a3bff0309d9b72d65c23e">try_lock</a> ()</td></tr>
-<tr class="memdesc:a368df75fc77a3bff0309d9b72d65c23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to acquire lock without blocking.  <br /></td></tr>
-<tr class="separator:a368df75fc77a3bff0309d9b72d65c23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a426edd639d6aeb60c972c86de81ddce4" id="r_a426edd639d6aeb60c972c86de81ddce4"><td class="memTemplParams" colspan="2">template&lt;typename Rep , typename Period &gt; </td></tr>
-<tr class="memitem:a426edd639d6aeb60c972c86de81ddce4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a426edd639d6aeb60c972c86de81ddce4">try_lock_for</a> (std::chrono::duration&lt; Rep, Period &gt; timeout)</td></tr>
-<tr class="memdesc:a426edd639d6aeb60c972c86de81ddce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to acquire lock with timeout.  <br /></td></tr>
-<tr class="separator:a426edd639d6aeb60c972c86de81ddce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1075afc89e8b2c6747b4b98895f15121" id="r_a1075afc89e8b2c6747b4b98895f15121"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1075afc89e8b2c6747b4b98895f15121">get_mut_unsafe</a> () noexcept</td></tr>
-<tr class="memdesc:a1075afc89e8b2c6747b4b98895f15121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a mutable reference without locking (UNSAFE).  <br /></td></tr>
-<tr class="separator:a1075afc89e8b2c6747b4b98895f15121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72ff90950bf7ca09f70f90b72c320484" id="r_a72ff90950bf7ca09f70f90b72c320484"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72ff90950bf7ca09f70f90b72c320484">get_unsafe</a> () const noexcept</td></tr>
-<tr class="memdesc:a72ff90950bf7ca09f70f90b72c320484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const reference without locking (UNSAFE).  <br /></td></tr>
-<tr class="separator:a72ff90950bf7ca09f70f90b72c320484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249830a4db6b200a3c3213319e35f2a8" id="r_a249830a4db6b200a3c3213319e35f2a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a249830a4db6b200a3c3213319e35f2a8">Mutex</a> ()</td></tr>
+<tr class="memdesc:a249830a4db6b200a3c3213319e35f2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct mutex with default-constructed data.  <br /></td></tr>
+<tr class="separator:a249830a4db6b200a3c3213319e35f2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa40c4fddf58dc6fcb3386f49a4e04d2" id="r_aaa40c4fddf58dc6fcb3386f49a4e04d2"><td class="memTemplParams" colspan="2">template&lt;typename U  = T, typename  = std::enable_if_t&lt;std::is_convertible_v&lt;U, T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:aaa40c4fddf58dc6fcb3386f49a4e04d2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaa40c4fddf58dc6fcb3386f49a4e04d2">Mutex</a> (U &amp;&amp;value)</td></tr>
+<tr class="memdesc:aaa40c4fddf58dc6fcb3386f49a4e04d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct mutex with given data.  <br /></td></tr>
+<tr class="separator:aaa40c4fddf58dc6fcb3386f49a4e04d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a598fdda46ae5c59f8fa44aadd1a1178d" id="r_a598fdda46ae5c59f8fa44aadd1a1178d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a598fdda46ae5c59f8fa44aadd1a1178d">Mutex</a> (const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;)=delete</td></tr>
+<tr class="separator:a598fdda46ae5c59f8fa44aadd1a1178d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a656cf2497a7d66863323b6a24aba8789" id="r_a656cf2497a7d66863323b6a24aba8789"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a656cf2497a7d66863323b6a24aba8789">operator=</a> (const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;)=delete</td></tr>
+<tr class="separator:a656cf2497a7d66863323b6a24aba8789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9c3fbda1cb24e6c730a07ee274c62b" id="r_acb9c3fbda1cb24e6c730a07ee274c62b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb9c3fbda1cb24e6c730a07ee274c62b">Mutex</a> (<a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:acb9c3fbda1cb24e6c730a07ee274c62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1332ceb8280ff09898dc2e3c445bb7c6" id="r_a1332ceb8280ff09898dc2e3c445bb7c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1332ceb8280ff09898dc2e3c445bb7c6">operator=</a> (<a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a1332ceb8280ff09898dc2e3c445bb7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98d54eade710ec4cfb52db8479106e4" id="r_aa98d54eade710ec4cfb52db8479106e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa98d54eade710ec4cfb52db8479106e4">lock</a> ()</td></tr>
+<tr class="memdesc:aa98d54eade710ec4cfb52db8479106e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acquire exclusive lock, blocking until available.  <br /></td></tr>
+<tr class="separator:aa98d54eade710ec4cfb52db8479106e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33e648cd122aca4f9e99d2000d0ae63" id="r_ad33e648cd122aca4f9e99d2000d0ae63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad33e648cd122aca4f9e99d2000d0ae63">try_lock</a> ()</td></tr>
+<tr class="memdesc:ad33e648cd122aca4f9e99d2000d0ae63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to acquire lock without blocking.  <br /></td></tr>
+<tr class="separator:ad33e648cd122aca4f9e99d2000d0ae63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1a9224375ca45a12036c21ad2ce9ba" id="r_afd1a9224375ca45a12036c21ad2ce9ba"><td class="memTemplParams" colspan="2">template&lt;typename Rep , typename Period &gt; </td></tr>
+<tr class="memitem:afd1a9224375ca45a12036c21ad2ce9ba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afd1a9224375ca45a12036c21ad2ce9ba">try_lock_for</a> (std::chrono::duration&lt; Rep, Period &gt; timeout)</td></tr>
+<tr class="memdesc:afd1a9224375ca45a12036c21ad2ce9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to acquire lock with timeout.  <br /></td></tr>
+<tr class="separator:afd1a9224375ca45a12036c21ad2ce9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826070492e0ff881ae6b56d46f7ff14b" id="r_a826070492e0ff881ae6b56d46f7ff14b"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826070492e0ff881ae6b56d46f7ff14b">get_mut_unsafe</a> () noexcept</td></tr>
+<tr class="memdesc:a826070492e0ff881ae6b56d46f7ff14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a mutable reference without locking (UNSAFE).  <br /></td></tr>
+<tr class="separator:a826070492e0ff881ae6b56d46f7ff14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c785cfe722bc53ab1ff297175bd7ae2" id="r_a8c785cfe722bc53ab1ff297175bd7ae2"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c785cfe722bc53ab1ff297175bd7ae2">get_unsafe</a> () const noexcept</td></tr>
+<tr class="memdesc:a8c785cfe722bc53ab1ff297175bd7ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const reference without locking (UNSAFE).  <br /></td></tr>
+<tr class="separator:a8c785cfe722bc53ab1ff297175bd7ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class crab::Mutex&lt; T &gt;</div><p>Data-owning mutex (Rust-style). </p>
-<p>The mutex owns the data it protects. The only way to access the data is through the <a class="el" href="classcrab_1_1Mutex_1_1Guard.html" title="Guard providing exclusive access to the data.">Guard</a> returned by <a class="el" href="#a6c22e94e6ff9f68874d39fc41b2c6bbc" title="Acquire exclusive lock, blocking until available.">lock()</a> or <a class="el" href="#a368df75fc77a3bff0309d9b72d65c23e" title="Try to acquire lock without blocking.">try_lock()</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename LockType = StdMutexLock&gt;<br />
+class crab::Mutex&lt; T, LockType &gt;</div><p>Data-owning mutex (Rust-style). </p>
+<p>The mutex owns the data it protects. The only way to access the data is through the <a class="el" href="classcrab_1_1Mutex_1_1Guard.html" title="Guard providing exclusive access to the data.">Guard</a> returned by <a class="el" href="#aa98d54eade710ec4cfb52db8479106e4" title="Acquire exclusive lock, blocking until available.">lock()</a> or <a class="el" href="#ad33e648cd122aca4f9e99d2000d0ae63" title="Try to acquire lock without blocking.">try_lock()</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Protected data type</td></tr>
+    <tr><td class="paramname">T</td><td>Protected data type </td></tr>
+    <tr><td class="paramname">LockType</td><td>Lock implementation (default: <a class="el" href="structcrab_1_1StdMutexLock.html" title="Default lock type using std::mutex.">StdMutexLock</a>) </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classcrab_1_1Mutex.html">crab::Mutex&lt;std::vector&lt;int&gt;</a>&gt; data(std::vector&lt;int&gt;{1, 2, 3});</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Data can only be accessed while holding the lock</span></div>
-<div class="line">{</div>
-<div class="line">    <span class="keyword">auto</span> guard = data.lock();</div>
-<div class="line">    guard-&gt;push_back(4);</div>
-<div class="line">    (*guard)[0] = 10;</div>
-<div class="line">}  <span class="comment">// Lock released here</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// try_lock for non-blocking</span></div>
-<div class="line"><span class="keywordflow">if</span> (<span class="keyword">auto</span> guard = data.try_lock(); guard.is_some()) {</div>
-<div class="line">    guard.unwrap()-&gt;clear();</div>
-<div class="line">}</div>
-<div class="ttc" id="aclasscrab_1_1Mutex_html"><div class="ttname"><a href="classcrab_1_1Mutex.html">crab::Mutex</a></div><div class="ttdoc">Data-owning mutex (Rust-style).</div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00046">mutex.h:46</a></div></div>
-</div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00046">46</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00077">77</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9cfd0768be1f6bf54f9b2d08aa6b41df" name="a9cfd0768be1f6bf54f9b2d08aa6b41df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cfd0768be1f6bf54f9b2d08aa6b41df">&#9670;&#160;</a></span>Mutex() <span class="overload">[1/4]</span></h2>
+<a id="a249830a4db6b200a3c3213319e35f2a8" name="a249830a4db6b200a3c3213319e35f2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249830a4db6b200a3c3213319e35f2a8">&#9670;&#160;</a></span>Mutex() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::Mutex </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::Mutex </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -207,17 +194,17 @@ template&lt;typename T &gt; </div>
 
 <p>Construct mutex with default-constructed data. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00120">120</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00162">162</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 
 </div>
 </div>
-<a id="a5d4ba2485129dba4ab8fe4b88399747e" name="a5d4ba2485129dba4ab8fe4b88399747e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d4ba2485129dba4ab8fe4b88399747e">&#9670;&#160;</a></span>Mutex() <span class="overload">[2/4]</span></h2>
+<a id="aaa40c4fddf58dc6fcb3386f49a4e04d2" name="aaa40c4fddf58dc6fcb3386f49a4e04d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa40c4fddf58dc6fcb3386f49a4e04d2">&#9670;&#160;</a></span>Mutex() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <div class="memtemplate">
 template&lt;typename U  = T, typename  = std::enable_if_t&lt;std::is_convertible_v&lt;U, T&gt;&gt;&gt; </div>
 <table class="mlabels">
@@ -225,7 +212,7 @@ template&lt;typename U  = T, typename  = std::enable_if_t&lt;std::is_convertible
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::Mutex </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::Mutex </td>
           <td>(</td>
           <td class="paramtype">U &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -240,25 +227,25 @@ template&lt;typename U  = T, typename  = std::enable_if_t&lt;std::is_convertible
 
 <p>Construct mutex with given data. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00127">127</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00169">169</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 
 </div>
 </div>
-<a id="a3057beaef5f36c1ade2586df7fe28962" name="a3057beaef5f36c1ade2586df7fe28962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3057beaef5f36c1ade2586df7fe28962">&#9670;&#160;</a></span>Mutex() <span class="overload">[3/4]</span></h2>
+<a id="a598fdda46ae5c59f8fa44aadd1a1178d" name="a598fdda46ae5c59f8fa44aadd1a1178d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a598fdda46ae5c59f8fa44aadd1a1178d">&#9670;&#160;</a></span>Mutex() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::Mutex </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::Mutex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T, LockType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -271,21 +258,21 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a5fb37afb4ca94b4d501098b07efd6f92" name="a5fb37afb4ca94b4d501098b07efd6f92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fb37afb4ca94b4d501098b07efd6f92">&#9670;&#160;</a></span>Mutex() <span class="overload">[4/4]</span></h2>
+<a id="acb9c3fbda1cb24e6c730a07ee274c62b" name="acb9c3fbda1cb24e6c730a07ee274c62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9c3fbda1cb24e6c730a07ee274c62b">&#9670;&#160;</a></span>Mutex() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::Mutex </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::Mutex </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T, LockType &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -299,19 +286,19 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1075afc89e8b2c6747b4b98895f15121" name="a1075afc89e8b2c6747b4b98895f15121"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1075afc89e8b2c6747b4b98895f15121">&#9670;&#160;</a></span>get_mut_unsafe()</h2>
+<a id="a826070492e0ff881ae6b56d46f7ff14b" name="a826070492e0ff881ae6b56d46f7ff14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826070492e0ff881ae6b56d46f7ff14b">&#9670;&#160;</a></span>get_mut_unsafe()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::get_mut_unsafe </td>
+          <td class="memname">T &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::get_mut_unsafe </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -327,23 +314,23 @@ template&lt;typename T &gt; </div>
 <p>Get a mutable reference without locking (UNSAFE). </p>
 <p>Only call this when you have exclusive access through other means (e.g., during single-threaded initialization). </p>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00179">179</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00221">221</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 
 </div>
 </div>
-<a id="a72ff90950bf7ca09f70f90b72c320484" name="a72ff90950bf7ca09f70f90b72c320484"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72ff90950bf7ca09f70f90b72c320484">&#9670;&#160;</a></span>get_unsafe()</h2>
+<a id="a8c785cfe722bc53ab1ff297175bd7ae2" name="a8c785cfe722bc53ab1ff297175bd7ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c785cfe722bc53ab1ff297175bd7ae2">&#9670;&#160;</a></span>get_unsafe()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const T &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::get_unsafe </td>
+          <td class="memname">const T &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::get_unsafe </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -359,23 +346,23 @@ template&lt;typename T &gt; </div>
 <p>Get a const reference without locking (UNSAFE). </p>
 <p>Only safe if no other thread can modify the data. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00186">186</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00228">228</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 
 </div>
 </div>
-<a id="a6c22e94e6ff9f68874d39fc41b2c6bbc" name="a6c22e94e6ff9f68874d39fc41b2c6bbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c22e94e6ff9f68874d39fc41b2c6bbc">&#9670;&#160;</a></span>lock()</h2>
+<a id="aa98d54eade710ec4cfb52db8479106e4" name="aa98d54eade710ec4cfb52db8479106e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98d54eade710ec4cfb52db8479106e4">&#9670;&#160;</a></span>lock()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::lock </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::lock </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -391,30 +378,25 @@ template&lt;typename T &gt; </div>
 <p>Acquire exclusive lock, blocking until available. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classcrab_1_1Mutex_1_1Guard.html" title="Guard providing exclusive access to the data.">Guard</a> providing access to the data </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00143">143</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Mutex_a6c22e94e6ff9f68874d39fc41b2c6bbc_icgraph.svg" width="336" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00185">185</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 
 </div>
 </div>
-<a id="aa3dd06c7d88c6e2bbc084dccd2725141" name="aa3dd06c7d88c6e2bbc084dccd2725141"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3dd06c7d88c6e2bbc084dccd2725141">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a656cf2497a7d66863323b6a24aba8789" name="a656cf2497a7d66863323b6a24aba8789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656cf2497a7d66863323b6a24aba8789">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::operator= </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T, LockType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -427,21 +409,21 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a8fe27cc2515b38b79ae8202916fe7ff7" name="a8fe27cc2515b38b79ae8202916fe7ff7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fe27cc2515b38b79ae8202916fe7ff7">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1332ceb8280ff09898dc2e3c445bb7c6" name="a1332ceb8280ff09898dc2e3c445bb7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1332ceb8280ff09898dc2e3c445bb7c6">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::operator= </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a> &amp; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classcrab_1_1Mutex.html">Mutex</a>&lt; T, LockType &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -454,19 +436,19 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a368df75fc77a3bff0309d9b72d65c23e" name="a368df75fc77a3bff0309d9b72d65c23e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a368df75fc77a3bff0309d9b72d65c23e">&#9670;&#160;</a></span>try_lock()</h2>
+<a id="ad33e648cd122aca4f9e99d2000d0ae63" name="ad33e648cd122aca4f9e99d2000d0ae63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad33e648cd122aca4f9e99d2000d0ae63">&#9670;&#160;</a></span>try_lock()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::try_lock </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::try_lock </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -482,22 +464,22 @@ template&lt;typename T &gt; </div>
 <p>Try to acquire lock without blocking. </p>
 <dl class="section return"><dt>Returns</dt><dd>Some(Guard) if lock acquired, None if already locked </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00151">151</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00194">194</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Mutex_a368df75fc77a3bff0309d9b72d65c23e_cgraph.svg" width="315" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Mutex_ad33e648cd122aca4f9e99d2000d0ae63_cgraph.svg" width="284" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a426edd639d6aeb60c972c86de81ddce4" name="a426edd639d6aeb60c972c86de81ddce4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a426edd639d6aeb60c972c86de81ddce4">&#9670;&#160;</a></span>try_lock_for()</h2>
+<a id="afd1a9224375ca45a12036c21ad2ce9ba" name="afd1a9224375ca45a12036c21ad2ce9ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1a9224375ca45a12036c21ad2ce9ba">&#9670;&#160;</a></span>try_lock_for()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename LockType  = StdMutexLock&gt; </div>
 <div class="memtemplate">
 template&lt;typename Rep , typename Period &gt; </div>
 <table class="mlabels">
@@ -505,7 +487,7 @@ template&lt;typename Rep , typename Period &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T &gt;::try_lock_for </td>
+          <td class="memname"><a class="el" href="classcrab_1_1Option.html">Option</a>&lt; <a class="el" href="classcrab_1_1Mutex_1_1Guard.html">Guard</a> &gt; <a class="el" href="classcrab_1_1Mutex.html">crab::Mutex</a>&lt; T, LockType &gt;::try_lock_for </td>
           <td>(</td>
           <td class="paramtype">std::chrono::duration&lt; Rep, Period &gt;</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span></td><td>)</td>
           <td></td>
@@ -526,12 +508,13 @@ template&lt;typename Rep , typename Period &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Some(Guard) if lock acquired, None if timeout expired </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Requires LockType to implement <a class="el" href="#afd1a9224375ca45a12036c21ad2ce9ba" title="Try to acquire lock with timeout.">try_lock_for()</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00165">165</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00208">208</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Mutex_a426edd639d6aeb60c972c86de81ddce4_cgraph.svg" width="336" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Mutex_afd1a9224375ca45a12036c21ad2ce9ba_cgraph.svg" width="306" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

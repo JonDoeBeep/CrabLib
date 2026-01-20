@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['requested_0',['requested',['../structcrab_1_1CapacityExceeded.html#a6f4a45abfa1f759e987f06f746e21809',1,'crab::CapacityExceeded']]]
+  ['offset_0',['offset',['../structcrab_1_1ParseError.html#a25c23ce9a82e3a48bcc4cf0d00a8a4bb',1,'crab::ParseError']]]
 ];

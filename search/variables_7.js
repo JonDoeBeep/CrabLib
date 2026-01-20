@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['size_0',['size',['../structcrab_1_1OutOfBounds.html#ae704742d41977552aff2bf157a575fd2',1,'crab::OutOfBounds']]]
+  ['requested_0',['requested',['../structcrab_1_1CapacityExceeded.html#a6f4a45abfa1f759e987f06f746e21809',1,'crab::CapacityExceeded']]]
 ];

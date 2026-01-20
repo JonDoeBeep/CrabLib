@@ -16,6 +16,7 @@ var annotated_dup =
       [ "Slice", "classcrab_1_1Slice.html", "classcrab_1_1Slice" ],
       [ "StaticRingBuffer", "classcrab_1_1StaticRingBuffer.html", "classcrab_1_1StaticRingBuffer" ],
       [ "StaticVector", "classcrab_1_1StaticVector.html", "classcrab_1_1StaticVector" ],
+      [ "StdMutexLock", "structcrab_1_1StdMutexLock.html", "structcrab_1_1StdMutexLock" ],
       [ "Unit", "structcrab_1_1Unit.html", "structcrab_1_1Unit" ]
     ] ]
 ];

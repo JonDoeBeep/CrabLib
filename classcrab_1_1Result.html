@@ -182,14 +182,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa08cb687a10dd2001de662e4aa790075"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa08cb687a10dd2001de662e4aa790075">map</a> (F &amp;&amp;fn) &amp;&amp;-&gt; <a class="el" href="classcrab_1_1Result.html">Result</a>&lt; std::invoke_result_t&lt; F, T &gt;, E &gt;</td></tr>
 <tr class="memdesc:aa08cb687a10dd2001de662e4aa790075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform the Ok value.  <br /></td></tr>
 <tr class="separator:aa08cb687a10dd2001de662e4aa790075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4c914d2a79249c504a8215d4ebbe38" id="r_a3c4c914d2a79249c504a8215d4ebbe38"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a3c4c914d2a79249c504a8215d4ebbe38"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3c4c914d2a79249c504a8215d4ebbe38">map</a> (F &amp;&amp;fn) const &amp;-&gt; <a class="el" href="classcrab_1_1Result.html">Result</a>&lt; std::invoke_result_t&lt; F, const T &amp; &gt;, E &gt;</td></tr>
+<tr class="separator:a3c4c914d2a79249c504a8215d4ebbe38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef6f3c26a03ce5ff94c4f5307f711aa8" id="r_aef6f3c26a03ce5ff94c4f5307f711aa8"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
 <tr class="memitem:aef6f3c26a03ce5ff94c4f5307f711aa8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aef6f3c26a03ce5ff94c4f5307f711aa8">map_err</a> (F &amp;&amp;fn) &amp;&amp;-&gt; <a class="el" href="classcrab_1_1Result.html">Result</a>&lt; T, std::invoke_result_t&lt; F, E &gt; &gt;</td></tr>
 <tr class="memdesc:aef6f3c26a03ce5ff94c4f5307f711aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform the Err value.  <br /></td></tr>
 <tr class="separator:aef6f3c26a03ce5ff94c4f5307f711aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893a2bcde9c83de0684d9fb713c5f2bd" id="r_a893a2bcde9c83de0684d9fb713c5f2bd"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a893a2bcde9c83de0684d9fb713c5f2bd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a893a2bcde9c83de0684d9fb713c5f2bd">map_err</a> (F &amp;&amp;fn) const &amp;-&gt; <a class="el" href="classcrab_1_1Result.html">Result</a>&lt; T, std::invoke_result_t&lt; F, const E &amp; &gt; &gt;</td></tr>
+<tr class="separator:a893a2bcde9c83de0684d9fb713c5f2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a677d72af67e086097bd24f85a7c87a7c" id="r_a677d72af67e086097bd24f85a7c87a7c"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
 <tr class="memitem:a677d72af67e086097bd24f85a7c87a7c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a677d72af67e086097bd24f85a7c87a7c">and_then</a> (F &amp;&amp;fn) &amp;&amp;-&gt; std::invoke_result_t&lt; F, T &gt;</td></tr>
 <tr class="memdesc:a677d72af67e086097bd24f85a7c87a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain operations that return <a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a>.  <br /></td></tr>
 <tr class="separator:a677d72af67e086097bd24f85a7c87a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ed7a463ff3cb7c4a000994a0d39ae1" id="r_ab3ed7a463ff3cb7c4a000994a0d39ae1"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:ab3ed7a463ff3cb7c4a000994a0d39ae1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab3ed7a463ff3cb7c4a000994a0d39ae1">and_then</a> (F &amp;&amp;fn) const &amp;-&gt; std::invoke_result_t&lt; F, const T &amp; &gt;</td></tr>
+<tr class="separator:ab3ed7a463ff3cb7c4a000994a0d39ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43b6bd6e1e2c676285eadfd00637a841" id="r_a43b6bd6e1e2c676285eadfd00637a841"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
 <tr class="memitem:a43b6bd6e1e2c676285eadfd00637a841"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a43b6bd6e1e2c676285eadfd00637a841">or_else</a> (F &amp;&amp;fn) &amp;&amp;-&gt; std::invoke_result_t&lt; F, E &gt;</td></tr>
 <tr class="memdesc:a43b6bd6e1e2c676285eadfd00637a841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide alternative on Err.  <br /></td></tr>
@@ -198,6 +207,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3fc8d1854b77b874f556e37d32e2da75"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3fc8d1854b77b874f556e37d32e2da75">match</a> (OkFn &amp;&amp;ok_fn, ErrFn &amp;&amp;err_fn) &amp;&amp;</td></tr>
 <tr class="memdesc:a3fc8d1854b77b874f556e37d32e2da75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pattern matching helper.  <br /></td></tr>
 <tr class="separator:a3fc8d1854b77b874f556e37d32e2da75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5bfe990cbd0ab97544724dcfafd5fd" id="r_a6c5bfe990cbd0ab97544724dcfafd5fd"><td class="memTemplParams" colspan="2">template&lt;typename OkFn , typename ErrFn &gt; </td></tr>
+<tr class="memitem:a6c5bfe990cbd0ab97544724dcfafd5fd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6c5bfe990cbd0ab97544724dcfafd5fd">match</a> (OkFn &amp;&amp;ok_fn, ErrFn &amp;&amp;err_fn) const &amp;</td></tr>
+<tr class="separator:a6c5bfe990cbd0ab97544724dcfafd5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename E&gt;<br />
@@ -389,7 +401,7 @@ template&lt;typename T , typename E &gt; </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a677d72af67e086097bd24f85a7c87a7c" name="a677d72af67e086097bd24f85a7c87a7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a677d72af67e086097bd24f85a7c87a7c">&#9670;&#160;</a></span>and_then()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a677d72af67e086097bd24f85a7c87a7c">&#9670;&#160;</a></span>and_then() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -419,11 +431,48 @@ template&lt;typename F &gt; </div>
 <p>Chain operations that return <a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a>. </p>
 <p>If Ok, applies fn to value (fn must return a <a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a> with same error type). If Err, returns the error unchanged. </p>
 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00298">298</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00318">318</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Result_a677d72af67e086097bd24f85a7c87a7c_cgraph.svg" width="276" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab3ed7a463ff3cb7c4a000994a0d39ae1" name="ab3ed7a463ff3cb7c4a000994a0d39ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ed7a463ff3cb7c4a000994a0d39ae1">&#9670;&#160;</a></span>and_then() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename E &gt; </div>
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcrab_1_1Result.html">crab::Result</a>&lt; T, E &gt;::and_then </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td> const &amp; -&gt; std::invoke_result_t&lt;F, const T&amp;&gt;
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00332">332</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Result_ab3ed7a463ff3cb7c4a000994a0d39ae1_cgraph.svg" width="276" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -551,7 +600,7 @@ template&lt;typename T , typename E &gt; </div>
 </div>
 </div>
 <a id="aa08cb687a10dd2001de662e4aa790075" name="aa08cb687a10dd2001de662e4aa790075"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa08cb687a10dd2001de662e4aa790075">&#9670;&#160;</a></span>map()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08cb687a10dd2001de662e4aa790075">&#9670;&#160;</a></span>map() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -590,8 +639,45 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a3c4c914d2a79249c504a8215d4ebbe38" name="a3c4c914d2a79249c504a8215d4ebbe38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4c914d2a79249c504a8215d4ebbe38">&#9670;&#160;</a></span>map() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename E &gt; </div>
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcrab_1_1Result.html">crab::Result</a>&lt; T, E &gt;::map </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td> const &amp; -&gt; <a class="el" href="classcrab_1_1Result.html">Result</a>&lt;std::invoke_result_t&lt;F, const T&amp;&gt;, E&gt;
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00275">275</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Result_a3c4c914d2a79249c504a8215d4ebbe38_cgraph.svg" width="248" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="aef6f3c26a03ce5ff94c4f5307f711aa8" name="aef6f3c26a03ce5ff94c4f5307f711aa8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef6f3c26a03ce5ff94c4f5307f711aa8">&#9670;&#160;</a></span>map_err()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6f3c26a03ce5ff94c4f5307f711aa8">&#9670;&#160;</a></span>map_err() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -621,7 +707,7 @@ template&lt;typename F &gt; </div>
 <p>Transform the Err value. </p>
 <p>If Err, applies fn to the error and returns Result&lt;T, U&gt;. If Ok, returns the value unchanged. </p>
 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00281">281</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00291">291</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -630,8 +716,45 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a893a2bcde9c83de0684d9fb713c5f2bd" name="a893a2bcde9c83de0684d9fb713c5f2bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893a2bcde9c83de0684d9fb713c5f2bd">&#9670;&#160;</a></span>map_err() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename E &gt; </div>
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcrab_1_1Result.html">crab::Result</a>&lt; T, E &gt;::map_err </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td> const &amp; -&gt; <a class="el" href="classcrab_1_1Result.html">Result</a>&lt;T, std::invoke_result_t&lt;F, const E&amp;&gt;&gt;
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00302">302</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcrab_1_1Result_a893a2bcde9c83de0684d9fb713c5f2bd_cgraph.svg" width="271" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a3fc8d1854b77b874f556e37d32e2da75" name="a3fc8d1854b77b874f556e37d32e2da75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fc8d1854b77b874f556e37d32e2da75">&#9670;&#160;</a></span>match()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc8d1854b77b874f556e37d32e2da75">&#9670;&#160;</a></span>match() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,7 +790,42 @@ template&lt;typename OkFn , typename ErrFn &gt; </div>
 <div class="line">    [](Error e) { <span class="keywordflow">return</span> 0; }</div>
 <div class="line">);</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00339">339</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00373">373</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+
+</div>
+</div>
+<a id="a6c5bfe990cbd0ab97544724dcfafd5fd" name="a6c5bfe990cbd0ab97544724dcfafd5fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c5bfe990cbd0ab97544724dcfafd5fd">&#9670;&#160;</a></span>match() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename E &gt; </div>
+<div class="memtemplate">
+template&lt;typename OkFn , typename ErrFn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcrab_1_1Result.html">crab::Result</a>&lt; T, E &gt;::match </td>
+          <td>(</td>
+          <td class="paramtype">OkFn &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>ok_fn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ErrFn &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>err_fn</em></span>&#160;) const &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00381">381</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 
 </div>
 </div>
@@ -847,7 +1005,7 @@ template&lt;typename F &gt; </div>
 <p>Provide alternative on Err. </p>
 <p>If Err, applies fn to error (fn must return Result&lt;T, E2&gt;). If Ok, returns the value unchanged. </p>
 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00318">318</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00352">352</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -25,11 +25,11 @@
 var NAVTREE =
 [
   [ "CrabLib", "index.html", [
-    [ "Usage", "index.html#autotoc_md3", null ],
-    [ "Installation", "index.html#autotoc_md4", null ],
-    [ "Requirements", "index.html#autotoc_md5", null ],
-    [ "Build Modes", "index.html#autotoc_md6", null ],
-    [ "License", "index.html#autotoc_md7", null ],
+    [ "Usage", "index.html#autotoc_md5", null ],
+    [ "Installation", "index.html#autotoc_md6", null ],
+    [ "Requirements", "index.html#autotoc_md7", null ],
+    [ "Build Modes", "index.html#autotoc_md8", null ],
+    [ "License", "index.html#autotoc_md9", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -63,8 +63,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classcrab_1_1Slice.html#aaf6c89c85e609a4b3b61e8f4d66f9b98",
-"structcrab_1_1CapacityExceeded.html"
+"classcrab_1_1Slice.html#aa7d93746087031a239ad7498e3fc40ae",
+"slice_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

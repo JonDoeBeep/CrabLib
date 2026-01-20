@@ -13,12 +13,14 @@ var searchData=
   ['constslice_10',['ConstSlice',['../namespacecrab.html#acd1e999c6e1e1539d8dac648680200cc',1,'crab']]],
   ['copy_5ffrom_11',['copy_from',['../classcrab_1_1Slice.html#a822c315c02c1b3a40139c536b6d2b220',1,'crab::Slice']]],
   ['copy_5fto_12',['copy_to',['../classcrab_1_1Slice.html#a9a92f0ef4f8d96bc31f0b73ffd110c5e',1,'crab::Slice']]],
-  ['core_20types_13',['Core Types',['../namespacecrab.html#autotoc_md0',1,'']]],
+  ['core_20types_13',['Core Types',['../namespacecrab.html#autotoc_md2',1,'']]],
   ['crab_14',['crab',['../namespacecrab.html',1,'']]],
   ['crab_3a_3adetail_15',['detail',['../namespacecrab_1_1detail.html',1,'crab']]],
   ['crab_5fassert_16',['CRAB_ASSERT',['../macros_8h.html#aff9d5c63a35974a6cf9afed5d04bfa95',1,'macros.h']]],
-  ['crab_5fdebug_5fassert_17',['CRAB_DEBUG_ASSERT',['../macros_8h.html#a4a625741c2c0b90d8be4ec3c5701fdf1',1,'macros.h']]],
-  ['crab_5funreachable_18',['CRAB_UNREACHABLE',['../macros_8h.html#ac3b59c8fa5a2e4c01967f8886d9e47f8',1,'macros.h']]],
-  ['crab_5funwrap_5for_19',['CRAB_UNWRAP_OR',['../macros_8h.html#a2bc23e2ca43d9e69ab664348e87aef46',1,'macros.h']]],
-  ['crablib_20',['CrabLib',['../index.html',1,'']]]
+  ['crab_5fcache_5fline_5fsize_17',['CRAB_CACHE_LINE_SIZE',['../macros_8h.html#a39932479095ecac7ea597b6bd74c6139',1,'macros.h']]],
+  ['crab_5fdebug_5fassert_18',['CRAB_DEBUG_ASSERT',['../macros_8h.html#a4a625741c2c0b90d8be4ec3c5701fdf1',1,'macros.h']]],
+  ['crab_5funreachable_19',['CRAB_UNREACHABLE',['../macros_8h.html#ac3b59c8fa5a2e4c01967f8886d9e47f8',1,'macros.h']]],
+  ['crab_5funwrap_5for_20',['CRAB_UNWRAP_OR',['../macros_8h.html#a2bc23e2ca43d9e69ab664348e87aef46',1,'macros.h']]],
+  ['crablib_21',['CrabLib',['../index.html',1,'']]],
+  ['customization_22',['Customization',['../macros_8h.html#autotoc_md0',1,'']]]
 ];

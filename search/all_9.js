@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['macros_2eh_0',['macros.h',['../macros_8h.html',1,'']]],
-  ['map_1',['map',['../classcrab_1_1Option.html#ab68ee2531b0173b349f2b2aebca63aaf',1,'crab::Option::map()'],['../classcrab_1_1Result.html#aa08cb687a10dd2001de662e4aa790075',1,'crab::Result::map(F &amp;&amp;fn) &amp;&amp;-&gt; Result&lt; std::invoke_result_t&lt; F, T &gt;, E &gt;']]],
-  ['map_5ferr_2',['map_err',['../classcrab_1_1Result.html#aef6f3c26a03ce5ff94c4f5307f711aa8',1,'crab::Result']]],
-  ['match_3',['match',['../classcrab_1_1Option.html#a496e8bb8dedb161f685cdc6277d167a1',1,'crab::Option::match(SomeFn &amp;&amp;some_fn, NoneFn &amp;&amp;none_fn) &amp;&amp;'],['../classcrab_1_1Option.html#a565e83cc20ada533d847f634a2306641',1,'crab::Option::match(SomeFn &amp;&amp;some_fn, NoneFn &amp;&amp;none_fn) const &amp;'],['../classcrab_1_1Result.html#a3fc8d1854b77b874f556e37d32e2da75',1,'crab::Result::match()']]],
-  ['modes_4',['Build Modes',['../index.html#autotoc_md6',1,'']]],
-  ['mutex_5',['Mutex',['../classcrab_1_1Mutex.html',1,'crab::Mutex&lt; T &gt;'],['../classcrab_1_1Mutex_1_1Guard.html#a0299a51a8b97fb3200509d92ba10fa2c',1,'crab::Mutex::Guard::Mutex'],['../classcrab_1_1Mutex.html#a9cfd0768be1f6bf54f9b2d08aa6b41df',1,'crab::Mutex::Mutex()'],['../classcrab_1_1Mutex.html#a5d4ba2485129dba4ab8fe4b88399747e',1,'crab::Mutex::Mutex(U &amp;&amp;value)'],['../classcrab_1_1Mutex.html#a3057beaef5f36c1ade2586df7fe28962',1,'crab::Mutex::Mutex(const Mutex &amp;)=delete'],['../classcrab_1_1Mutex.html#a5fb37afb4ca94b4d501098b07efd6f92',1,'crab::Mutex::Mutex(Mutex &amp;&amp;)=delete']]],
-  ['mutex_2eh_6',['mutex.h',['../mutex_8h.html',1,'']]],
-  ['mutexguard_7',['MutexGuard',['../namespacecrab.html#affb2becb9fc3dd4b3d2d68eb7118bc24',1,'crab']]],
-  ['mutslice_8',['MutSlice',['../namespacecrab.html#a405118eb0c9da43bee007f8516ec8bcf',1,'crab']]]
+  ['m_5fmutex_0',['m_mutex',['../structcrab_1_1StdMutexLock.html#a6c6ac57536f478df34cbda86ef62b2ea',1,'crab::StdMutexLock']]],
+  ['macros_2eh_1',['macros.h',['../macros_8h.html',1,'']]],
+  ['map_2',['map',['../classcrab_1_1Option.html#ab68ee2531b0173b349f2b2aebca63aaf',1,'crab::Option::map()'],['../classcrab_1_1Result.html#aa08cb687a10dd2001de662e4aa790075',1,'crab::Result::map(F &amp;&amp;fn) &amp;&amp;-&gt; Result&lt; std::invoke_result_t&lt; F, T &gt;, E &gt;'],['../classcrab_1_1Result.html#a3c4c914d2a79249c504a8215d4ebbe38',1,'crab::Result::map(F &amp;&amp;fn) const &amp;-&gt; Result&lt; std::invoke_result_t&lt; F, const T &amp; &gt;, E &gt;']]],
+  ['map_5ferr_3',['map_err',['../classcrab_1_1Result.html#aef6f3c26a03ce5ff94c4f5307f711aa8',1,'crab::Result::map_err(F &amp;&amp;fn) &amp;&amp;-&gt; Result&lt; T, std::invoke_result_t&lt; F, E &gt; &gt;'],['../classcrab_1_1Result.html#a893a2bcde9c83de0684d9fb713c5f2bd',1,'crab::Result::map_err(F &amp;&amp;fn) const &amp;-&gt; Result&lt; T, std::invoke_result_t&lt; F, const E &amp; &gt; &gt;']]],
+  ['match_4',['match',['../classcrab_1_1Option.html#a496e8bb8dedb161f685cdc6277d167a1',1,'crab::Option::match(SomeFn &amp;&amp;some_fn, NoneFn &amp;&amp;none_fn) &amp;&amp;'],['../classcrab_1_1Option.html#a565e83cc20ada533d847f634a2306641',1,'crab::Option::match(SomeFn &amp;&amp;some_fn, NoneFn &amp;&amp;none_fn) const &amp;'],['../classcrab_1_1Result.html#a3fc8d1854b77b874f556e37d32e2da75',1,'crab::Result::match(OkFn &amp;&amp;ok_fn, ErrFn &amp;&amp;err_fn) &amp;&amp;'],['../classcrab_1_1Result.html#a6c5bfe990cbd0ab97544724dcfafd5fd',1,'crab::Result::match(OkFn &amp;&amp;ok_fn, ErrFn &amp;&amp;err_fn) const &amp;']]],
+  ['modes_5',['Build Modes',['../index.html#autotoc_md8',1,'']]],
+  ['mutex_6',['Mutex',['../classcrab_1_1Mutex.html',1,'crab::Mutex&lt; T, LockType &gt;'],['../classcrab_1_1Mutex_1_1Guard.html#a0299a51a8b97fb3200509d92ba10fa2c',1,'crab::Mutex::Guard::Mutex'],['../classcrab_1_1Mutex.html#a249830a4db6b200a3c3213319e35f2a8',1,'crab::Mutex::Mutex()'],['../classcrab_1_1Mutex.html#aaa40c4fddf58dc6fcb3386f49a4e04d2',1,'crab::Mutex::Mutex(U &amp;&amp;value)'],['../classcrab_1_1Mutex.html#a598fdda46ae5c59f8fa44aadd1a1178d',1,'crab::Mutex::Mutex(const Mutex &amp;)=delete'],['../classcrab_1_1Mutex.html#acb9c3fbda1cb24e6c730a07ee274c62b',1,'crab::Mutex::Mutex(Mutex &amp;&amp;)=delete']]],
+  ['mutex_2eh_7',['mutex.h',['../mutex_8h.html',1,'']]],
+  ['mutexguard_8',['MutexGuard',['../namespacecrab.html#a65924c1fe958e3a22cca545194005e09',1,'crab']]],
+  ['mutslice_9',['MutSlice',['../namespacecrab.html#a405118eb0c9da43bee007f8516ec8bcf',1,'crab']]]
 ];

@@ -8,9 +8,9 @@
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="203,190,165,176,129,164,130,159,167,171,205,185"/>
 <area shape="rect" id="Node000005" href="$classcrab_1_1StaticVector.html#a7dfbeaf1783535704f641cf12e381d78" title="Remove last element." alt="" coords="23,185,148,226"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="198,208,148,208,148,203,198,203"/>
-<area shape="rect" id="Node000006" href="$classcrab_1_1Mutex.html#a368df75fc77a3bff0309d9b72d65c23e" title="Try to acquire lock without blocking." alt="" coords="16,250,155,276"/>
+<area shape="rect" id="Node000006" href="$classcrab_1_1Mutex.html#ad33e648cd122aca4f9e99d2000d0ae63" title="Try to acquire lock without blocking." alt="" coords="16,250,155,276"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="205,227,167,240,130,252,129,247,165,235,203,222"/>
-<area shape="rect" id="Node000007" href="$classcrab_1_1Mutex.html#a426edd639d6aeb60c972c86de81ddce4" title="Try to acquire lock with timeout." alt="" coords="5,300,166,325"/>
+<area shape="rect" id="Node000007" href="$classcrab_1_1Mutex.html#afd1a9224375ca45a12036c21ad2ce9ba" title="Try to acquire lock with timeout." alt="" coords="5,300,166,325"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="237,232,206,262,167,291,144,301,141,296,164,286,202,258,233,228"/>
 <area shape="rect" id="Node000008" href="$classcrab_1_1StaticRingBuffer.html#a69f24bd18175788df17d858c360f1a6d" title="Try to pop an element (consumer only)." alt="" coords="12,349,159,390"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="246,234,215,287,193,315,167,340,150,351,147,347,164,336,189,311,210,284,241,231"/>
