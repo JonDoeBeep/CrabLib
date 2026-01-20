@@ -7,16 +7,56 @@
  * Unlike std::mutex which requires separate data management, crab::Mutex<T>
  * owns the protected data and only allows access through a lock guard.
  * This prevents the common "forgot to lock" anti-pattern.
+ * 
+ * ## Embedded/RTOS Usage
+ * 
+ * For bare-metal or RTOS, provide a custom lock type:
+ * @code
+ * struct FreeRtosLock {
+ *     SemaphoreHandle_t sem;
+ *     FreeRtosLock() { sem = xSemaphoreCreateMutex(); }
+ *     void lock() { xSemaphoreTake(sem, portMAX_DELAY); }
+ *     void unlock() { xSemaphoreGive(sem); }
+ *     bool try_lock() { return xSemaphoreTake(sem, 0) == pdTRUE; }
+ * };
+ * 
+ * crab::Mutex<Data, FreeRtosLock> my_data;
+ * @endcode
  */
 
 #include "crab/option.h"
 #include "crab/macros.h"
 
 #include <chrono>
-#include <mutex>
 #include <utility>
 
+// Only include std::mutex if not using custom lock
+#ifndef CRAB_NO_STD_MUTEX
+#include <mutex>
+#endif
+
 namespace crab {
+
+/**
+ * @brief Default lock type using std::mutex.
+ * 
+ * Not available if CRAB_NO_STD_MUTEX is defined (for bare-metal).
+ */
+#ifndef CRAB_NO_STD_MUTEX
+struct StdMutexLock {
+    std::mutex m_mutex;
+    
+    void lock() { m_mutex.lock(); }
+    void unlock() { m_mutex.unlock(); }
+    bool try_lock() { return m_mutex.try_lock(); }
+    
+    template<typename Rep, typename Period>
+    bool try_lock_for(std::chrono::duration<Rep, Period>) {
+        // std::mutex doesn't support timed locking
+        return try_lock();
+    }
+};
+#endif
 
 /**
  * @brief Data-owning mutex (Rust-style).
@@ -25,24 +65,15 @@ namespace crab {
  * is through the Guard returned by lock() or try_lock().
  * 
  * @tparam T Protected data type
- * 
- * @code{cpp}
- *   crab::Mutex<std::vector<int>> data(std::vector<int>{1, 2, 3});
- *   
- *   // Data can only be accessed while holding the lock
- *   {
- *       auto guard = data.lock();
- *       guard->push_back(4);
- *       (*guard)[0] = 10;
- *   }  // Lock released here
- *   
- *   // try_lock for non-blocking
- *   if (auto guard = data.try_lock(); guard.is_some()) {
- *       guard.unwrap()->clear();
- *   }
- * @endcode
+ * @tparam LockType Lock implementation (default: StdMutexLock)
  */
-template<typename T>
+template<typename T, 
+#ifdef CRAB_NO_STD_MUTEX
+         typename LockType  // User must provide lock type
+#else
+         typename LockType = StdMutexLock
+#endif
+>
 class Mutex {
 public:
     /**
@@ -58,17 +89,29 @@ public:
         
         // Movable
         Guard(Guard&& other) noexcept 
-            : m_lock(std::move(other.m_lock)), m_data(other.m_data) {
+            : m_mutex(other.m_mutex), m_data(other.m_data), m_owns_lock(other.m_owns_lock) {
+            other.m_owns_lock = false;
             other.m_data = nullptr;
         }
         
         Guard& operator=(Guard&& other) noexcept {
             if (this != &other) {
-                m_lock = std::move(other.m_lock);
+                if (m_owns_lock) {
+                    m_mutex->unlock();
+                }
+                m_mutex = other.m_mutex;
                 m_data = other.m_data;
+                m_owns_lock = other.m_owns_lock;
+                other.m_owns_lock = false;
                 other.m_data = nullptr;
             }
             return *this;
+        }
+        
+        ~Guard() {
+            if (m_owns_lock) {
+                m_mutex->unlock();
+            }
         }
         
         /**
@@ -98,16 +141,15 @@ public:
         [[nodiscard]] T* get() noexcept { return m_data; }
         [[nodiscard]] const T* get() const noexcept { return m_data; }
         
-        ~Guard() = default;
-        
     private:
         friend class Mutex;
         
-        Guard(std::unique_lock<std::mutex> lock, T& data) noexcept
-            : m_lock(std::move(lock)), m_data(&data) {}
+        Guard(LockType& mutex, T& data, bool owns) noexcept
+            : m_mutex(&mutex), m_data(&data), m_owns_lock(owns) {}
         
-        std::unique_lock<std::mutex> m_lock;
+        LockType* m_mutex;
         T* m_data;
+        bool m_owns_lock;
     };
     
     // ========================================================================
@@ -141,7 +183,8 @@ public:
      * @return Guard providing access to the data
      */
     [[nodiscard]] Guard lock() {
-        return Guard(std::unique_lock<std::mutex>(m_mutex), m_data);
+        m_mutex.lock();
+        return Guard(m_mutex, m_data, true);
     }
     
     /**
@@ -149,9 +192,8 @@ public:
      * @return Some(Guard) if lock acquired, None if already locked
      */
     [[nodiscard]] Option<Guard> try_lock() {
-        std::unique_lock<std::mutex> lock(m_mutex, std::try_to_lock);
-        if (lock.owns_lock()) {
-            return Some(Guard(std::move(lock), m_data));
+        if (m_mutex.try_lock()) {
+            return Some(Guard(m_mutex, m_data, true));
         }
         return None;
     }
@@ -160,12 +202,12 @@ public:
      * @brief Try to acquire lock with timeout.
      * @param timeout Maximum time to wait for lock
      * @return Some(Guard) if lock acquired, None if timeout expired
+     * @note Requires LockType to implement try_lock_for()
      */
     template<typename Rep, typename Period>
     [[nodiscard]] Option<Guard> try_lock_for(std::chrono::duration<Rep, Period> timeout) {
-        std::unique_lock<std::mutex> lock(m_mutex, timeout);
-        if (lock.owns_lock()) {
-            return Some(Guard(std::move(lock), m_data));
+        if (m_mutex.try_lock_for(timeout)) {
+            return Some(Guard(m_mutex, m_data, true));
         }
         return None;
     }
@@ -186,17 +228,20 @@ public:
     [[nodiscard]] const T& get_unsafe() const noexcept { return m_data; }
     
 private:
-    mutable std::mutex m_mutex;
+    mutable LockType m_mutex;
     T m_data;
 };
 
 /**
  * @brief RAII lock guard with scope-based automatic unlock.
- * 
- * For cases where you need the guard to outlive its creation scope
- * but still want deterministic unlock behavior.
  */
-template<typename T>
-using MutexGuard = typename Mutex<T>::Guard;
+template<typename T, typename LockType = 
+#ifdef CRAB_NO_STD_MUTEX
+    void  // User must specify
+#else
+    StdMutexLock
+#endif
+>
+using MutexGuard = typename Mutex<T, LockType>::Guard;
 
 } // namespace crab

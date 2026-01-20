@@ -252,11 +252,11 @@ private:
     }
     
     // Aligned storage, elements constructed/destructed manually
-    alignas(64) alignas(T) unsigned char m_storage[sizeof(T) * Capacity];
+    alignas(CRAB_CACHE_LINE_SIZE) alignas(T) unsigned char m_storage[sizeof(T) * Capacity];
     
     // Head and tail on separate cache lines to avoid false sharing
-    alignas(64) std::atomic<size_type> m_head;
-    alignas(64) std::atomic<size_type> m_tail;
+    alignas(CRAB_CACHE_LINE_SIZE) std::atomic<size_type> m_head;
+    alignas(CRAB_CACHE_LINE_SIZE) std::atomic<size_type> m_tail;
 };
 
 } // namespace crab

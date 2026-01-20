@@ -5,19 +5,74 @@
  * @brief CrabLib assertion and utility macros.
  * 
  * Provides debug-mode assertions and helper macros for safe error handling.
- * Designed for -fno-exceptions environments.
+ * Designed for -fno-exceptions environments and bare-metal embedded.
+ * 
+ * ## Customization
+ * 
+ * - `CRAB_CUSTOM_PANIC`: Define before including to use custom panic handler
+ * - `CRAB_CACHE_LINE_SIZE`: Define to override default cache line (32 or 64)
  */
 
+// ============================================================================
+// Platform Configuration
+// ============================================================================
+
+/**
+ * @brief Cache line size for false-sharing prevention.
+ * 
+ * Override by defining CRAB_CACHE_LINE_SIZE before including CrabLib.
+ * Default: 32 for ARM, 64 for x86/x64.
+ */
+#ifndef CRAB_CACHE_LINE_SIZE
+    #if defined(__arm__) || defined(__ARM_ARCH) || defined(__thumb__)
+        #define CRAB_CACHE_LINE_SIZE 32
+    #else
+        #define CRAB_CACHE_LINE_SIZE 64
+    #endif
+#endif
+
+// ============================================================================
+// Panic Handler
+// ============================================================================
+
+namespace crab {
+
+/**
+ * @brief Panic handler signature.
+ */
+using PanicHandler = void(*)(const char* msg, const char* file, int line);
+
+} // namespace crab
+
+#ifdef CRAB_CUSTOM_PANIC
+
+// User-defined panic handler: user must define crab_panic_handler()
+// Example:
+//   [[noreturn]] void crab_panic_handler(const char* msg, const char* file, int line) {
+//       my_uart_print("PANIC: ", msg);
+//       while(1) { __WFI(); }  // Halt on ARM
+//   }
+extern "C" [[noreturn]] void crab_panic_handler(const char* msg, const char* file, int line);
+
+namespace crab {
+[[noreturn]] inline void panic(const char* msg, const char* file, int line) {
+    crab_panic_handler(msg, file, line);
+}
+} // namespace crab
+
+#else
+
+// Default panic handler using stdio (for desktop/Linux targets)
 #include <cstdio>
 #include <cstdlib>
 
 namespace crab {
 
 /**
- * @brief Called when an assertion or unwrap fails.
+ * @brief Default panic handler: prints message and aborts.
  * 
- * In debug builds, prints message and aborts.
- * In release builds with CRAB_UNSAFE_FAST, this is undefined behavior.
+ * To use a custom handler (e.g., for bare-metal), define CRAB_CUSTOM_PANIC
+ * and implement crab_panic_handler() in your code.
  */
 [[noreturn]] inline void panic(const char* msg, const char* file, int line) {
     std::fprintf(stderr, "CRAB PANIC at %s:%d: %s\n", file, line, msg);
@@ -25,6 +80,8 @@ namespace crab {
 }
 
 } // namespace crab
+
+#endif // CRAB_CUSTOM_PANIC
 
 // ============================================================================
 // Debug Assertions
@@ -63,11 +120,6 @@ namespace crab {
  * Expands to unwrap-or-return-error pattern.
  * 
  * @note Requires GCC/Clang statement expressions ({ }).
- *       @code
- *       auto result = may_fail();
- *       if (result.is_err()) return Err(result.unwrap_err());
- *       auto val = result.unwrap();
- *       @endcode
  */
 #if defined(__GNUC__) || defined(__clang__)
 #define CRAB_TRY(expr) \
@@ -79,8 +131,7 @@ namespace crab {
         _result.unwrap(); \
     })
 #else
-    // MSVC: No statement expression support
-    #error "CRAB_TRY requires GCC or Clang. Use explicit if-checks on MSVC."
+    #error "CRAB_TRY requires GCC or Clang. Use explicit if-checks on other compilers."
 #endif
 
 /**

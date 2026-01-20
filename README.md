@@ -29,7 +29,7 @@ Or copy `src/crab/` to your include path.
 ## Requirements
 
 - C++17
-- Tested with GCC 13.3, Clang, MSVC
+- Tested with GCC 13.3 and Clang
 
 ## Build Modes
 

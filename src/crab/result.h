@@ -271,6 +271,16 @@ public:
         return crab::Err(std::get<1>(std::move(m_storage)));
     }
     
+    template<typename F>
+    [[nodiscard]] auto map(F&& fn) const& 
+        -> Result<std::invoke_result_t<F, const T&>, E>
+    {
+        if (is_ok()) {
+            return crab::Ok(fn(std::get<0>(m_storage)));
+        }
+        return crab::Err(std::get<1>(m_storage));
+    }
+    
     /**
      * @brief Transform the Err value.
      * 
@@ -286,6 +296,16 @@ public:
             return crab::Err(fn(std::get<1>(std::move(m_storage))));
         }
         return crab::Ok(std::get<0>(std::move(m_storage)));
+    }
+    
+    template<typename F>
+    [[nodiscard]] auto map_err(F&& fn) const&
+        -> Result<T, std::invoke_result_t<F, const E&>>
+    {
+        if (is_err()) {
+            return crab::Err(fn(std::get<1>(m_storage)));
+        }
+        return crab::Ok(std::get<0>(m_storage));
     }
     
     /**
@@ -306,6 +326,20 @@ public:
             return fn(std::get<0>(std::move(m_storage)));
         }
         return crab::Err(std::get<1>(std::move(m_storage)));
+    }
+    
+    template<typename F>
+    [[nodiscard]] auto and_then(F&& fn) const&
+        -> std::invoke_result_t<F, const T&>
+    {
+        using ReturnType = std::invoke_result_t<F, const T&>;
+        static_assert(std::is_same_v<typename ReturnType::error_type, E>,
+            "and_then: function must return Result with same error type E");
+        
+        if (is_ok()) {
+            return fn(std::get<0>(m_storage));
+        }
+        return crab::Err(std::get<1>(m_storage));
     }
     
     /**
@@ -341,6 +375,14 @@ public:
             return ok_fn(std::get<0>(std::move(m_storage)));
         }
         return err_fn(std::get<1>(std::move(m_storage)));
+    }
+    
+    template<typename OkFn, typename ErrFn>
+    [[nodiscard]] auto match(OkFn&& ok_fn, ErrFn&& err_fn) const& {
+        if (is_ok()) {
+            return ok_fn(std::get<0>(m_storage));
+        }
+        return err_fn(std::get<1>(m_storage));
     }
     
 private:
