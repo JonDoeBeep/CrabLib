@@ -1,36 +1,39 @@
 <map id="crab/mutex.h" name="crab/mutex.h">
-<area shape="rect" id="Node000001" title="Rust&#45;style data&#45;owning Mutex&lt;T&gt;." alt="" coords="510,5,606,31"/>
-<area shape="rect" id="Node000002" href="$option_8h.html" title="Ergonomic Option&lt;T&gt; type with Rust&#45;inspired monadic interface." alt="" coords="290,79,386,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,34,390,76,389,71,520,29"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="482,226,533,252"/>
-<area shape="poly" id="edge19_Node000001_Node000012" title=" " alt="" coords="558,32,516,212,511,211,553,31"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="595,79,652,105"/>
-<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="571,29,604,66,600,69,567,33"/>
-<area shape="rect" id="Node000003" href="$macros_8h.html" title="CrabLib assertion and utility macros." alt="" coords="110,226,214,252"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="291,102,193,122,150,137,124,154,119,168,121,183,141,214,136,217,116,185,114,168,120,151,148,132,191,117,290,97"/>
-<area shape="rect" id="Node000006" href="$error__types_8h.html" title="Common error types for CrabLib Result&lt;T, E&gt;." alt="" coords="328,226,452,252"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="374,103,407,122,422,135,434,152,438,169,435,186,415,217,411,214,430,184,433,169,429,154,418,139,404,126,371,108"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="251,153,329,178"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="332,106,309,141,304,138,328,103"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="353,153,419,178"/>
-<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="348,103,372,138,367,141,344,106"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="5,226,87,252"/>
-<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="290,99,250,105,204,116,156,132,113,155,83,183,61,214,57,211,79,179,110,150,154,127,202,111,249,100,290,94"/>
-<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="373,103,414,122,454,151,480,180,498,211,493,214,475,183,451,155,411,127,371,108"/>
-<area shape="rect" id="Node000013" href="$result_8h.html" title="Rust&#45;inspired Result&lt;T, E&gt; type for error handling without exceptions." alt="" coords="134,153,227,178"/>
-<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="312,108,222,148,220,143,310,103"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="80,300,137,326"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="155,254,129,289,125,286,151,251"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="160,300,220,326"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="169,251,182,284,177,286,164,253"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="314,300,378,326"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="385,254,364,288,359,285,380,251"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="402,300,463,326"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="399,251,420,285,415,288,395,254"/>
-<area shape="poly" id="edge13_Node000013_Node000003" title=" " alt="" coords="180,179,172,212,166,211,175,178"/>
-<area shape="poly" id="edge14_Node000013_Node000006" title=" " alt="" coords="217,176,341,218,339,223,215,181"/>
-<area shape="poly" id="edge15_Node000013_Node000011" title=" " alt="" coords="159,181,83,221,81,216,157,177"/>
-<area shape="poly" id="edge16_Node000013_Node000012" title=" " alt="" coords="228,174,465,224,467,224,466,229,464,229,226,179"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="237,226,298,252"/>
-<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="197,177,243,214,240,218,194,181"/>
+<area shape="rect" id="Node000001" title="Rust&#45;style data&#45;owning Mutex&lt;T&gt;." alt="" coords="538,5,633,31"/>
+<area shape="rect" id="Node000002" href="$option_8h.html" title="Ergonomic Option&lt;T&gt; type with Rust&#45;inspired monadic interface." alt="" coords="311,79,406,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="548,34,413,76,411,71,546,29"/>
+<area shape="rect" id="Node000003" href="$macros_8h.html" title="CrabLib assertion and utility macros." alt="" coords="22,226,125,252"/>
+<area shape="poly" id="edge18_Node000001_Node000003" title=" " alt="" coords="538,27,425,43,286,69,218,86,158,106,110,129,80,154,73,167,70,181,70,211,65,211,64,181,68,165,75,151,107,124,156,101,216,81,284,63,424,37,537,22"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="554,226,606,252"/>
+<area shape="poly" id="edge21_Node000001_Node000012" title=" " alt="" coords="588,31,583,211,578,211,583,31"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="623,79,684,105"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="599,29,634,66,630,70,595,33"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="708,79,764,105"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="612,29,698,70,696,74,610,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="311,101,192,121,136,136,115,145,101,155,91,167,84,181,77,212,72,211,79,180,86,164,97,151,113,140,134,131,191,115,310,96"/>
+<area shape="rect" id="Node000006" href="$error__types_8h.html" title="Common error types for CrabLib Result&lt;T, E&gt;." alt="" coords="217,226,341,252"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="355,106,295,214,290,211,350,104"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="111,153,188,178"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="324,108,200,150,199,145,322,103"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="212,153,279,178"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="341,107,279,146,276,142,338,103"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="449,226,530,252"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="392,103,428,122,461,151,478,181,487,211,482,212,473,183,457,154,425,127,389,108"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="392,103,438,123,487,150,527,182,561,213,557,217,524,186,484,155,436,128,390,108"/>
+<area shape="rect" id="Node000013" href="$result_8h.html" title="Rust&#45;inspired Result&lt;T, E&gt; type for error handling without exceptions." alt="" coords="354,153,446,178"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="368,104,388,138,383,141,363,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,300,62,326"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="69,254,50,288,45,285,65,251"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,300,144,326"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="83,251,103,285,98,288,78,254"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="208,300,272,326"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="275,253,256,287,252,285,270,251"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="297,300,357,326"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="289,251,312,285,308,288,285,254"/>
+<area shape="poly" id="edge13_Node000013_Node000003" title=" " alt="" coords="354,180,141,226,140,221,353,174"/>
+<area shape="poly" id="edge14_Node000013_Node000006" title=" " alt="" coords="381,181,314,220,311,216,378,177"/>
+<area shape="poly" id="edge15_Node000013_Node000011" title=" " alt="" coords="417,177,464,214,461,219,414,181"/>
+<area shape="poly" id="edge16_Node000013_Node000012" title=" " alt="" coords="432,176,541,220,539,224,430,181"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="365,226,425,252"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="402,179,400,211,394,211,397,178"/>
 </map>

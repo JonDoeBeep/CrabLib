@@ -238,13 +238,12 @@ Quick Start</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Or with CRAB_TRY macro:</span></div>
 <div class="line"><a class="code hl_class" href="classcrab_1_1Result.html">crab::Result&lt;int, crab::OutOfBounds&gt;</a> safe_access_v2(<a class="code hl_class" href="classcrab_1_1Slice.html">crab::Slice&lt;int&gt;</a> data, <span class="keywordtype">size_t</span> i) {</div>
-<div class="line">    <span class="keyword">auto</span> elem = <a class="code hl_define" href="macros_8h.html#a7202e1031079fc51f9b8fcca401189b4">CRAB_TRY</a>(data.<a class="code hl_function" href="classcrab_1_1Slice.html#af2c91da11311a6356400f592dddc047e">get</a>(i));</div>
+<div class="line">    <span class="keyword">auto</span> elem = CRAB_TRY(data.<a class="code hl_function" href="classcrab_1_1Slice.html#af2c91da11311a6356400f592dddc047e">get</a>(i));</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="#a9085393618393c23f64c2525f2c1961f">crab::Ok</a>(elem.get());</div>
 <div class="line">}</div>
 <div class="ttc" id="aclasscrab_1_1Result_html"><div class="ttname"><a href="classcrab_1_1Result.html">crab::Result</a></div><div class="ttdoc">Result type for operations that can fail.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00105">result.h:105</a></div></div>
 <div class="ttc" id="aclasscrab_1_1Slice_html"><div class="ttname"><a href="classcrab_1_1Slice.html">crab::Slice</a></div><div class="ttdoc">Bounds-checked view into contiguous memory.</div><div class="ttdef"><b>Definition</b> <a href="slice_8h_source.html#l00045">slice.h:45</a></div></div>
 <div class="ttc" id="aclasscrab_1_1Slice_html_af2c91da11311a6356400f592dddc047e"><div class="ttname"><a href="classcrab_1_1Slice.html#af2c91da11311a6356400f592dddc047e">crab::Slice::get</a></div><div class="ttdeci">Result&lt; std::reference_wrapper&lt; T &gt;, OutOfBounds &gt; get(size_type index) noexcept</div><div class="ttdoc">Get element with bounds checking, returning Result.</div><div class="ttdef"><b>Definition</b> <a href="slice_8h_source.html#l00135">slice.h:135</a></div></div>
-<div class="ttc" id="amacros_8h_html_a7202e1031079fc51f9b8fcca401189b4"><div class="ttname"><a href="macros_8h.html#a7202e1031079fc51f9b8fcca401189b4">CRAB_TRY</a></div><div class="ttdeci">#define CRAB_TRY(expr)</div><div class="ttdoc">Early return if Result is Err.</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00065">macros.h:65</a></div></div>
 <div class="ttc" id="anamespacecrab_html_a3745fae96ffff64db507a12f27498a39"><div class="ttname"><a href="#a3745fae96ffff64db507a12f27498a39">crab::Err</a></div><div class="ttdeci">detail::ErrTag&lt; std::decay_t&lt; E &gt; &gt; Err(E &amp;&amp;error)</div><div class="ttdoc">Factory function to create an Err result.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00075">result.h:75</a></div></div>
 <div class="ttc" id="anamespacecrab_html_a9085393618393c23f64c2525f2c1961f"><div class="ttname"><a href="#a9085393618393c23f64c2525f2c1961f">crab::Ok</a></div><div class="ttdeci">detail::OkTag&lt; Unit &gt; Ok()</div><div class="ttdoc">Factory function for Ok with void/Unit result.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00065">result.h:65</a></div></div>
 <div class="ttc" id="aprelude_8h_html"><div class="ttname"><a href="prelude_8h.html">prelude.h</a></div><div class="ttdoc">Single-include header for all CrabLib types.</div></div>
@@ -263,7 +262,7 @@ Quick Start</h2>
 
 <p>Byte slice for raw buffer operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00314">314</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00320">320</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
 
 </div>
 </div>
@@ -279,7 +278,7 @@ Quick Start</h2>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00315">315</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00321">321</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +296,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00311">311</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00317">317</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
 
 </div>
 </div>
@@ -318,7 +317,7 @@ template&lt;typename T &gt; </div>
 <p>RAII lock guard with scope-based automatic unlock. </p>
 <p>For cases where you need the guard to outlive its creation scope but still want deterministic unlock behavior. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00172">172</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mutex_8h_source.html#l00200">200</a> of file <a class="el" href="mutex_8h_source.html">mutex.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +335,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00308">308</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slice_8h_source.html#l00314">314</a> of file <a class="el" href="slice_8h_source.html">slice.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +355,7 @@ template&lt;typename E &gt; </div>
 
 <p><a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a> with <a class="el" href="structcrab_1_1Unit.html" title="Generic unit type (for Result&lt;void, E&gt; specialization).">Unit</a> as success type (for void operations). </p>
 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00356">356</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00358">358</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 
 </div>
 </div>
@@ -549,7 +548,7 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecrab_ab1da763ed0c6f937fecc16e891b2015a_icgraph.svg" width="292" height="347"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecrab_ab1da763ed0c6f937fecc16e891b2015a_icgraph.svg" width="306" height="396"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

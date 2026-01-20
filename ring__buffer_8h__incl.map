@@ -5,15 +5,15 @@
 <area shape="rect" id="Node000003" href="$macros_8h.html" title="CrabLib assertion and utility macros." alt="" coords="23,226,127,252"/>
 <area shape="poly" id="edge18_Node000001_Node000003" title=" " alt="" coords="656,25,358,44,214,60,164,70,137,81,111,109,94,144,84,180,79,211,74,210,79,179,89,142,107,106,133,77,163,65,213,55,358,39,655,19"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="248,300,312,326"/>
-<area shape="poly" id="edge21_Node000001_Node000007" title=" " alt="" coords="656,29,546,45,417,72,355,88,301,108,259,130,232,154,224,170,221,187,227,223,244,257,263,286,258,289,239,260,222,225,216,187,219,168,228,151,256,126,299,103,354,83,416,66,545,40,655,24"/>
+<area shape="poly" id="edge20_Node000001_Node000007" title=" " alt="" coords="656,29,546,45,417,72,355,88,301,108,259,130,232,154,224,170,221,187,227,223,244,257,263,286,258,289,239,260,222,225,216,187,219,168,228,151,256,126,299,103,354,83,416,66,545,40,655,24"/>
 <area shape="rect" id="Node000011" title=" " alt="" coords="664,226,745,252"/>
 <area shape="poly" id="edge22_Node000001_Node000011" title=" " alt="" coords="724,31,738,78,744,129,738,179,723,214,718,212,732,178,739,129,732,80,719,32"/>
 <area shape="rect" id="Node000012" title=" " alt="" coords="588,226,639,252"/>
 <area shape="poly" id="edge23_Node000001_Node000012" title=" " alt="" coords="713,32,628,214,623,212,708,30"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="805,79,854,105"/>
-<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="737,29,799,68,796,73,734,34"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="878,79,938,105"/>
-<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="750,29,864,71,862,76,748,34"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="805,79,865,105"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="738,29,803,68,801,73,735,34"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="890,79,935,105"/>
+<area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="750,29,876,74,874,80,749,34"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,103,342,122,286,137,231,155,163,187,107,220,104,215,161,182,229,150,284,132,341,117,440,97"/>
 <area shape="rect" id="Node000006" href="$error__types_8h.html" title="Common error types for CrabLib Result&lt;T, E&gt;." alt="" coords="354,226,478,252"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="485,106,431,213,427,211,480,104"/>

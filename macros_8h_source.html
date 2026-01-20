@@ -148,29 +148,32 @@ $(function(){initNavTree('macros_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// Error Propagation (like Rust&#39;s ? operator)</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">// ============================================================================</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00065" data-start="" data-end="">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="macros_8h.html#a7202e1031079fc51f9b8fcca401189b4">   65</a></span><span class="preprocessor">#define CRAB_TRY(expr) \</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    ({ \</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">        auto&amp;&amp; _result = (expr); \</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">        if (_result.is_err()) { \</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">            return decltype(_result)::Err(_result.unwrap_err()); \</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">        } \</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">        _result.unwrap(); \</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    })</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#if defined(__GNUC__) || defined(__clang__)</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#define CRAB_TRY(expr) \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">    ({ \</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">        auto&amp;&amp; _result = (expr); \</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">        if (_result.is_err()) { \</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">            return decltype(_result)(crab::Err(_result.unwrap_err())); \</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">        } \</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">        _result.unwrap(); \</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">    })</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// MSVC: No statement expression support</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    #error &quot;CRAB_TRY requires GCC or Clang. Use explicit if-checks on MSVC.&quot;</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00089" data-start="" data-end="">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="macros_8h.html#a2bc23e2ca43d9e69ab664348e87aef46">   89</a></span><span class="preprocessor">#define CRAB_UNWRAP_OR(expr, default_val) \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    ((expr).is_ok() ? (expr).unwrap() : (default_val))</span></div>
 </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="foldopen" id="foldopen00077" data-start="" data-end="">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="macros_8h.html#a2bc23e2ca43d9e69ab664348e87aef46">   77</a></span><span class="preprocessor">#define CRAB_UNWRAP_OR(expr, default_val) \</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    ((expr).is_ok() ? (expr).unwrap() : (default_val))</span></div>
-</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#if defined(__GNUC__) || defined(__clang__)</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">    #define CRAB_UNREACHABLE() __builtin_unreachable()</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#elif defined(_MSC_VER)</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    #define CRAB_UNREACHABLE() __assume(false)</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="macros_8h.html#ac3b59c8fa5a2e4c01967f8886d9e47f8">   88</a></span><span class="preprocessor">    #define CRAB_UNREACHABLE() ::crab::panic(&quot;unreachable code reached&quot;, __FILE__, __LINE__)</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#if defined(__GNUC__) || defined(__clang__)</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">    #define CRAB_UNREACHABLE() __builtin_unreachable()</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#elif defined(_MSC_VER)</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    #define CRAB_UNREACHABLE() __assume(false)</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="macros_8h.html#ac3b59c8fa5a2e4c01967f8886d9e47f8">  100</a></span><span class="preprocessor">    #define CRAB_UNREACHABLE() ::crab::panic(&quot;unreachable code reached&quot;, __FILE__, __LINE__)</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="anamespacecrab_html"><div class="ttname"><a href="namespacecrab.html">crab</a></div><div class="ttdoc">CrabLib: Rust-inspired memory safety for C++17.</div><div class="ttdef"><b>Definition</b> <a href="error__types_8h_source.html#l00014">error_types.h:14</a></div></div>
 <div class="ttc" id="anamespacecrab_html_a773a0ed082c670eb29cdf5b517a276a8"><div class="ttname"><a href="namespacecrab.html#a773a0ed082c670eb29cdf5b517a276a8">crab::panic</a></div><div class="ttdeci">void panic(const char *msg, const char *file, int line)</div><div class="ttdoc">Called when an assertion or unwrap fails.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">macros.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

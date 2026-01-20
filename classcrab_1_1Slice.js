@@ -21,7 +21,7 @@ var classcrab_1_1Slice =
     [ "begin", "classcrab_1_1Slice.html#a97b47f44ce0d79721ed7c1f6cd2fb902", null ],
     [ "cbegin", "classcrab_1_1Slice.html#a745bc1b152bb22797910112b1827b7ed", null ],
     [ "cend", "classcrab_1_1Slice.html#a2393658d0e1f9dbed2b6e0a564107c40", null ],
-    [ "copy_from", "classcrab_1_1Slice.html#ad3f4a3d68c44d5a3bc865f4e4c087882", null ],
+    [ "copy_from", "classcrab_1_1Slice.html#a822c315c02c1b3a40139c536b6d2b220", null ],
     [ "copy_to", "classcrab_1_1Slice.html#a9a92f0ef4f8d96bc31f0b73ffd110c5e", null ],
     [ "data", "classcrab_1_1Slice.html#a6d0b415fc23f698efefc9f71f29d0098", null ],
     [ "data", "classcrab_1_1Slice.html#ad6adc4ad2d1e3a0b35295f595c91a461", null ],

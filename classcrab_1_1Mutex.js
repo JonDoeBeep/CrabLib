@@ -10,5 +10,6 @@ var classcrab_1_1Mutex =
     [ "lock", "classcrab_1_1Mutex.html#a6c22e94e6ff9f68874d39fc41b2c6bbc", null ],
     [ "operator=", "classcrab_1_1Mutex.html#aa3dd06c7d88c6e2bbc084dccd2725141", null ],
     [ "operator=", "classcrab_1_1Mutex.html#a8fe27cc2515b38b79ae8202916fe7ff7", null ],
-    [ "try_lock", "classcrab_1_1Mutex.html#a368df75fc77a3bff0309d9b72d65c23e", null ]
+    [ "try_lock", "classcrab_1_1Mutex.html#a368df75fc77a3bff0309d9b72d65c23e", null ],
+    [ "try_lock_for", "classcrab_1_1Mutex.html#a426edd639d6aeb60c972c86de81ddce4", null ]
 ];

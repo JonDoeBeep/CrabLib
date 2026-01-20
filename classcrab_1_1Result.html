@@ -222,9 +222,8 @@ class crab::Result&lt; T, E &gt;</div><p><a class="el" href="classcrab_1_1Result
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Or with CRAB_TRY:</span></div>
-<div class="line"><span class="keywordtype">int</span> val = <a class="code hl_define" href="macros_8h.html#a7202e1031079fc51f9b8fcca401189b4">CRAB_TRY</a>(get_element(5));</div>
+<div class="line"><span class="keywordtype">int</span> val = CRAB_TRY(get_element(5));</div>
 <div class="ttc" id="aclasscrab_1_1Result_html"><div class="ttname"><a href="classcrab_1_1Result.html">crab::Result</a></div><div class="ttdoc">Result type for operations that can fail.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00105">result.h:105</a></div></div>
-<div class="ttc" id="amacros_8h_html_a7202e1031079fc51f9b8fcca401189b4"><div class="ttname"><a href="macros_8h.html#a7202e1031079fc51f9b8fcca401189b4">CRAB_TRY</a></div><div class="ttdeci">#define CRAB_TRY(expr)</div><div class="ttdoc">Early return if Result is Err.</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00065">macros.h:65</a></div></div>
 <div class="ttc" id="anamespacecrab_html_a3745fae96ffff64db507a12f27498a39"><div class="ttname"><a href="namespacecrab.html#a3745fae96ffff64db507a12f27498a39">crab::Err</a></div><div class="ttdeci">detail::ErrTag&lt; std::decay_t&lt; E &gt; &gt; Err(E &amp;&amp;error)</div><div class="ttdoc">Factory function to create an Err result.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00075">result.h:75</a></div></div>
 <div class="ttc" id="anamespacecrab_html_a9085393618393c23f64c2525f2c1961f"><div class="ttname"><a href="namespacecrab.html#a9085393618393c23f64c2525f2c1961f">crab::Ok</a></div><div class="ttdeci">detail::OkTag&lt; Unit &gt; Ok()</div><div class="ttdoc">Factory function for Ok with void/Unit result.</div><div class="ttdef"><b>Definition</b> <a href="result_8h_source.html#l00065">result.h:65</a></div></div>
 <div class="ttc" id="astructcrab_1_1OutOfBounds_html"><div class="ttname"><a href="structcrab_1_1OutOfBounds.html">crab::OutOfBounds</a></div><div class="ttdoc">Out of bounds access error.</div><div class="ttdef"><b>Definition</b> <a href="error__types_8h_source.html#l00019">error_types.h:19</a></div></div>
@@ -418,7 +417,7 @@ template&lt;typename F &gt; </div>
 </div><div class="memdoc">
 
 <p>Chain operations that return <a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a>. </p>
-<p>If Ok, applies fn to value (fn must return a <a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a>). If Err, returns the error unchanged. </p>
+<p>If Ok, applies fn to value (fn must return a <a class="el" href="classcrab_1_1Result.html" title="Result type for operations that can fail.">Result</a> with same error type). If Err, returns the error unchanged. </p>
 
 <p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00298">298</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 <div class="dynheader">
@@ -668,7 +667,7 @@ template&lt;typename OkFn , typename ErrFn &gt; </div>
 <div class="line">    [](Error e) { <span class="keywordflow">return</span> 0; }</div>
 <div class="line">);</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00337">337</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00339">339</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 
 </div>
 </div>
@@ -848,7 +847,7 @@ template&lt;typename F &gt; </div>
 <p>Provide alternative on Err. </p>
 <p>If Err, applies fn to error (fn must return Result&lt;T, E2&gt;). If Ok, returns the value unchanged. </p>
 
-<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00316">316</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8h_source.html#l00318">318</a> of file <a class="el" href="result_8h_source.html">result.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -85,7 +85,7 @@ var sectionId = 'dynsection-0';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classcrab_1_1Slice.html#ad3f4a3d68c44d5a3bc865f4e4c087882" target="_top" xlink:title="Copy from another slice into this one.">
+<g id="a_Node000003"><a xlink:href="classcrab_1_1Slice.html#a822c315c02c1b3a40139c536b6d2b220" target="_top" xlink:title="Copy from another slice into this one.">
 <polygon fill="white" stroke="#666666" points="115,-633.88 4.5,-633.88 4.5,-614.62 115,-614.62 115,-633.88"/>
 <text text-anchor="middle" x="59.75" y="-620.38" font-family="Helvetica,sans-Serif" font-size="10.00">crab::Slice::copy_from</text>
 </a>
